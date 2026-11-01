@@ -1,0 +1,4 @@
+# 关系分析插件：宿主半身只负责提供一行挂载点，全部逻辑在浏览器端。
+- insert:
+    - id: dsh-relationship-analytics
+      name: dsh-relationship-analytics

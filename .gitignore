@@ -1,0 +1,19 @@
+# 忽略真实数据，只允许仓库里的模拟数据
+node_modules/
+.host-status.json
+data/
+*.jsonl
+conversations.json
+decrypted/
+*.db
+*.sqlite
+*.key
+.env
+.env.*
+decision-engine.json
+templates-user.json
+
+# 本地构建缓存
+out/
+dist/
+*.log

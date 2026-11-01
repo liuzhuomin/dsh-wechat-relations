@@ -1,0 +1,49 @@
+{
+  "name": "dsh-relations",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Relationship analytics plugin for DeepSeek Harness: person cards, decision timeline, three-dimension health scores, persona cards and AI decision advice. Ships with synthetic demo data only.",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "scripts": {
+    "mock": "node mock-data.mjs",
+    "build": "node build.mjs",
+    "check": "node validate.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "relationship",
+    "analytics"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuzhuomin/dsh-relations.git"
+  },
+  "license": "MIT"
+}
