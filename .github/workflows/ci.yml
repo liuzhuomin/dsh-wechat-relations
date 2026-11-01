@@ -1,0 +1,26 @@
+﻿name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 生成模拟数据并构建
+        run: |
+          node mock-data.mjs
+          node build.mjs
+      - name: 自检
+        run: node validate.mjs
+      - name: 确认仓库内没有真实数据
+        run: |
+          if git ls-files | grep -E '^(data/|.*\.jsonl$|.*\.db$)' ; then
+            echo "发现疑似真实数据文件" && exit 1
+          fi
