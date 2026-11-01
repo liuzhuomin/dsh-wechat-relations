@@ -1,4 +1,4 @@
-# dsh-relations
+# dsh-wechat-relations
 
 > 微信关系分析插件 · 为 [DeepSeek Harness](https://github.com/deepseek-ai) 设计
 >
@@ -66,8 +66,8 @@
 ## 快速开始
 
 ```bash
-git clone https://github.com/liuzhuomin/dsh-relations.git
-cd dsh-relations
+git clone https://github.com/liuzhuomin/dsh-wechat-relations.git
+cd dsh-wechat-relations
 
 # 生成模拟数据（24 个假人物）
 node mock-data.mjs
@@ -82,7 +82,7 @@ node validate.mjs
 然后在 DSH 的 profile 里挂上：
 
 ```bash
-dsh plugin add /path/to/dsh-relations
+dsh plugin add /path/to/dsh-wechat-relations
 ```
 
 重启 DSH，侧栏出现「关系分析」。
@@ -155,7 +155,7 @@ locale/             zh / en
 默认用 DSH 当前模型。要换 JEV（TypeSafe AI 商业决策模型）：
 
 ```bash
-curl -X POST http://127.0.0.1:<port>/dsh-relationship/engine \
+curl -X POST http://127.0.0.1:<port>/dsh-wechat-relationship/engine \
   -H 'content-type: application/json' \
   -d '{"engine":"jev","baseUrl":"https://api.example.com/v1","apiKey":"sk-...","model":"jev-1"}'
 ```
