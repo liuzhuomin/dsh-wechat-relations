@@ -1,8 +1,13 @@
+[![ci](https://github.com/liuzhuomin/dsh-wechat-relations/actions/workflows/ci.yml/badge.svg)](https://github.com/liuzhuomin/dsh-wechat-relations/actions/workflows/ci.yml)
+
 # dsh-wechat-relations
 
 > 微信关系分析插件 · 为 [DeepSeek Harness](https://github.com/deepseek-ai) 设计
 >
 > 把上千个联系人压缩成一张可判断的关系网：谁值得投入、谁在降温、下一步该怎么做。
+
+
+> 姊妹项目：[dsh-art-workshop](https://github.com/liuzhuomin/dsh-art-workshop) —— 视频/图文生产流水线，选题到成片一条链。
 
 **本仓库只带模拟数据。** 所有人物、消息量、分数都是随机生成的假数据（`demo_001` 这类 id），不含任何真实微信内容。要接自己的数据，见[「接入自己的数据」](#接入自己的数据)。
 
