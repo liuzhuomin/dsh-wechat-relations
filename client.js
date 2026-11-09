@@ -3195,14 +3195,13 @@ window.__ModuleLoader__.load({
       ['me', '我'],
     ]
     const CAT_LABEL = {
-      colleague: '同事', friend: '朋友', brother: '兄弟', ambiguous: '暧昧',
+      colleague: '同事', friend: '朋友', brother: '兄弟',
       ex: '前任', family: '家人', life: '生活', other: '其他',
     }
     const CAT_COLOR = {
       colleague: 'var(--dsw-alias-brand-primary)',
       friend: 'var(--dsw-alias-state-success-primary)',
       brother: 'var(--dsw-alias-state-warn-primary)',
-      ambiguous: 'var(--dsw-alias-state-error-primary)',
       ex: 'var(--dsw-alias-state-idle-primary)',
       family: 'var(--dsw-alias-state-success-primary)',
       life: 'var(--dsw-alias-label-tertiary)',
