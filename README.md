@@ -41,7 +41,7 @@
 | **关系网** | 群聊共现矩阵，谁和谁在同一个圈子 |
 | **时间** | 逐月消息量柱状图，新人用三角标出，可下钻到某个月 |
 | **洞察** | 19 张统计卡：昼夜分布、回复落差、情感曲线、称呼演变 |
-| **分类** | 同事 / 朋友 / 兄弟 / 暧昧 / 前任 / 家人 / 生活 / 其他 |
+| **分类** | 同事 / 朋友 / 兄弟 / 前任 / 家人 / 生活 / 其他（`overrides.json` 可人工指定） |
 | **我** | 自己的画像：总量、活跃时段、36 个月走势、MBTI 推测 |
 
 ### 单人页
@@ -51,6 +51,7 @@
 - **决策转折点** —— 点开直接看那段时间的聊天记录
 - **认设文档** —— 自动提取的性格画像，可一键复制
 - **该怎么决策** —— 读最近 1200 条聊天 + 全部数据，输出「推进 / 维持 / 降温 / 收手」的可执行建议
+- **导出聊天记录** —— 一键把该联系人的全部聊天导出为 PDF（本机 headless Chrome 打印）
 
 ---
 
@@ -58,9 +59,11 @@
 
 所有分数都是**同批联系人内的百分位**，不是绝对值，不会因为整体话多就全员 80 分。
 
-**我在意 TA** = 字数占比 40% + 主动发起 20% + 持续 20% + 优先回复 10% + 投入字数 10%
+**我在意 TA** = 字数占比 28% + 主动 20% + 优先回复 18% + 持续 14% + 投入字数 12% + 主动邀约 8%
 
-**TA 在意我** = 主动 30% + 优先回复 25% + 投入字数 25% + 持续 20%
+**TA 在意我** = 主动 25% + 优先回复 25% + 投入字数 20% + 持续 18% + 回复节奏 12%
+
+持续项带时间衰减 `exp(-最近互动天数 / 365)`；「优先回复」以对方自己的回复中位数为基线。
 
 **健康度** = 回复速度 / 边界感 / 持续性 三项百分位，均值固定 50
 
@@ -145,7 +148,7 @@ dsh plugin add /path/to/dsh-wechat-relations
 ## 结构
 
 ```
-index.js            host 半：/data /events /range /search /advise /engine /analyze
+index.js            host 半：/data /events /range /search /advise /engine /analyze /export
 client.template.js  浏览器半：六个视图 + 单人页 + AI 面板
 build.mjs           把 JSON 注入 template，产出 client.js
 mock-data.mjs       生成模拟数据
@@ -160,7 +163,7 @@ locale/             zh / en
 默认用 DSH 当前模型。要换 JEV（TypeSafe AI 商业决策模型）：
 
 ```bash
-curl -X POST http://127.0.0.1:<port>/dsh-wechat-relationship/engine \
+curl -X POST http://127.0.0.1:<port>/dsh-relationship/engine \
   -H 'content-type: application/json' \
   -d '{"engine":"jev","baseUrl":"https://api.example.com/v1","apiKey":"sk-...","model":"jev-1"}'
 ```

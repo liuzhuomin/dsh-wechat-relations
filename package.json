@@ -1,6 +1,6 @@
 {
   "name": "dsh-wechat-relations",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "private": false,
   "type": "module",
   "description": "Relationship analytics plugin for DeepSeek Harness: person cards, decision timeline, three-dimension health scores, persona cards and AI decision advice. Ships with synthetic demo data only.",

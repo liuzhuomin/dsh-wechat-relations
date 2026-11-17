@@ -5,10 +5,16 @@
  * 挂载或调用失败时返回 500，客户端会回落到「复制提示词」，不会白点。
  */
 import { readFile } from 'node:fs/promises'
-import { writeFileSync } from 'node:fs'
+import { existsSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { spawn } from 'node:child_process'
+import { readFile as readFileP, writeFile as writeFileP, mkdir as mkdirP } from 'node:fs/promises'
 
-const DIR = 'D:/dsh_wp/dsh-relationship-analytics'
+// 数据目录：默认用插件自身目录，作者机器上继续沿用旧的开发目录
+const HERE = fileURLToPath(new URL('.', import.meta.url))
+const DEV_DIR = 'D:/dsh_wp/dsh-relationship-analytics'
+const DIR = process.env.DSH_REL_DIR || (existsSync(DEV_DIR) ? DEV_DIR : HERE)
 const MARK = join(DIR, '.host-status.json')
 const ROUTE = '/dsh-relationship/analyze'
 const PING = '/dsh-relationship/ping'
@@ -360,6 +366,108 @@ export function apply(ctx) {
         if (!text) throw new Error('JEV 没有返回文本')
         return text
       }
+      /**
+       * 导出某个人的全部聊天记录为 PDF。
+       * 用本机 Chrome 的 headless 打印，避免引入中文字体嵌入的 PDF 库。
+       *   GET /dsh-relationship/export?id=<wxid>&limit=<可选，最多导出多少条，默认全部>
+       */
+      web.register({ kind: 'exact', path: '/dsh-relationship/export', handler: async (req, res) => {
+        try {
+          const url = new URL(req.url || '/', 'http://x')
+          const id = url.searchParams.get('id')
+          if (!id || id === 'me') throw new Error('请指定一个联系人 id')
+          const limit = Number(url.searchParams.get('limit') || 0)
+
+          const raw = await readFile(join(DIR, 'data', `${id}.jsonl`), 'utf8')
+          let msgs = raw.split('\n').filter(Boolean).map((line) => {
+            try { return JSON.parse(line) } catch { return null }
+          }).filter(Boolean)
+          if (limit > 0) msgs = msgs.slice(-limit)
+
+          // count=1：只返回条数，给前端做进度预估，不生成 PDF
+          if (url.searchParams.get('count') === '1') {
+            send(res, 200, { ok: true, total: msgs.length })
+            return
+          }
+
+          const people = JSON.parse(await readFile(join(DIR, 'people.json'), 'utf8'))
+          const person = people.find((p) => p.id === id) || { name: id }
+          const name = person.name || id
+          const esc = (t) => String(t || '')
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+
+          const byDay = new Map()
+          for (const m of msgs) {
+            const d = new Date(m.sentAt)
+            const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+            if (!byDay.has(key)) byDay.set(key, [])
+            byDay.get(key).push({
+              self: !!m.isSelf,
+              time: `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`,
+              text: m.text || '',
+            })
+          }
+
+          let body = ''
+          for (const [day, list] of byDay) {
+            body += `<div class="day">${day}</div>`
+            for (const m of list) {
+              body += `<div class="row ${m.self ? 'me' : 'them'}">
+                <div class="meta">${m.self ? '我' : esc(name)} · ${m.time}</div>
+                <div class="bubble">${esc(m.text)}</div>
+              </div>`
+            }
+          }
+
+          const html = `<!doctype html><html><head><meta charset="utf-8"><style>
+            @page { size: A4; margin: 16mm 14mm; }
+            body { font-family: "Microsoft YaHei","PingFang SC",sans-serif; color:#1a1a1a; font-size: 12px; }
+            h1 { font-size: 20px; margin: 0 0 6px; }
+            .sub { color:#8a8a8a; font-size: 11px; margin-bottom: 18px; }
+            .day { margin: 16px 0 8px; text-align:center; color:#9a9a9a; font-size: 11px; }
+            .row { margin: 6px 0; page-break-inside: avoid; }
+            .row.me { text-align: right; }
+            .meta { color:#a0a0a0; font-size: 10px; margin-bottom: 2px; }
+            .bubble { display:inline-block; max-width: 78%; padding: 6px 10px; border-radius: 6px;
+                      background:#f2f2f2; text-align:left; word-break: break-word; white-space: pre-wrap; }
+            .row.me .bubble { background:#d9f7be; }
+          </style></head><body>
+            <h1>${esc(name)} · 聊天记录</h1>
+            <div class="sub">共 ${msgs.length} 条 · 导出时间 ${new Date().toLocaleString('zh-CN')}</div>
+            ${body}
+          </body></html>`
+
+          const tmpDir = process.env.DSH_EXPORT_TMP || join(DIR, '.export')
+          await mkdirP(tmpDir, { recursive: true })
+          const stamp = `${id}-${Date.now()}`
+          const htmlPath = join(tmpDir, `${stamp}.html`)
+          const pdfPath = join(tmpDir, `${stamp}.pdf`)
+          await writeFileP(htmlPath, html, 'utf8')
+
+          const chrome = process.env.DSH_CHROME
+            || 'C:/Program Files/Google/Chrome/Application/chrome.exe'
+          await new Promise((resolve, reject) => {
+            const c = spawn(chrome, [
+              '--headless=new', '--disable-gpu', '--no-sandbox',
+              '--no-pdf-header-footer',
+              `--print-to-pdf=${pdfPath}`,
+              `file:///${htmlPath.replace(/\\/g, '/')}`,
+            ], { stdio: 'ignore' })
+            c.on('close', (code) => (code === 0 ? resolve() : reject(new Error(`chrome exited ${code}`))))
+            c.on('error', reject)
+          })
+
+          const pdf = await readFile(pdfPath)
+          res.writeHead(200, {
+            'content-type': 'application/pdf',
+            'content-disposition': `attachment; filename="chat.pdf"; filename*=UTF-8''${encodeURIComponent(name + '-聊天记录.pdf')}`,
+            'content-length': pdf.length,
+          })
+          res.end(pdf)
+        } catch (error) {
+          send(res, 500, { ok: false, error: String((error && error.message) || error) })
+        }
+      } })
       web.register({ kind: 'exact', path: '/dsh-relationship/advise', handler: async (req, res) => {
         try {
           if (req.method !== 'POST') {

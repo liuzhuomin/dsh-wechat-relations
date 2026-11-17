@@ -3476,6 +3476,32 @@ window.__ModuleLoader__.load({
       const [evKind, setEvKind] = React.useState(null)
       const [adv, setAdv] = React.useState(null)
       const [advBusy, setAdvBusy] = React.useState(false)
+      const [exp, setExp] = React.useState(null)
+      const doExport = async () => {
+        const nm = p.name || p.title || p.id
+        setExp({ stage: 'count' })
+        try {
+          const c = await (await fetch(`/dsh-relationship/export?id=${encodeURIComponent(p.id)}&count=1`)).json()
+          const total = (c && c.ok && c.total) || 0
+          setExp({ stage: 'gen', total })
+          const resp = await fetch(`/dsh-relationship/export?id=${encodeURIComponent(p.id)}`)
+          if (!resp.ok) throw new Error('HTTP ' + resp.status)
+          const blob = await resp.blob()
+          if (blob.size < 1000) throw new Error('返回内容不是有效 PDF')
+          setExp({ stage: 'save', total, size: blob.size })
+          const url = URL.createObjectURL(blob)
+          const a = document.createElement('a')
+          a.href = url
+          a.download = `${nm}-聊天记录.pdf`
+          document.body.appendChild(a)
+          a.click()
+          a.remove()
+          setTimeout(() => URL.revokeObjectURL(url), 8000)
+          setExp({ stage: 'done', total, size: blob.size })
+        } catch (e) {
+          setExp({ stage: 'err', msg: String((e && e.message) || e) })
+        }
+      }
       const runAdvise = async () => {
         if (advBusy) return
         setAdvBusy(true)
@@ -3558,17 +3584,31 @@ window.__ModuleLoader__.load({
         h('div', { className: 'dsh-rel-tags' },
           h('span', { className: 'dsh-rel-tag', style: { color: CAT_COLOR[p.category] } }, CAT_LABEL[p.category] || '其他'),
           (p.labels || []).map((l) => h('span', { key: l, className: 'dsh-rel-tag' }, l))),
+        h('button', {
+          type: 'button', className: 'dsh-rel-row dsh-rel-fact-btn',
+          style: { marginTop: 6 },
+          onClick: doExport,
+          disabled: exp && (exp.stage === 'count' || exp.stage === 'gen'),
+        },
+        h('span', null,
+          !exp ? '导出聊天记录 PDF'
+            : exp.stage === 'count' ? '统计消息条数…'
+              : exp.stage === 'gen' ? `生成 PDF 中（共 ${exp.total} 条）…`
+                : exp.stage === 'save' ? '写入文件…'
+                  : exp.stage === 'done' ? `已导出 ${exp.total} 条 · ${Math.round((exp.size || 0) / 1024)} KB`
+                    : '重试导出'),
+        h('b', null, exp && exp.stage === 'err' ? '失败' : 'PDF')),
+        exp && exp.stage === 'err'
+          ? h('div', { className: 'dsh-rel-muted', style: { color: 'var(--dsw-alias-state-error-primary)' } }, exp.msg)
+          : null,
+        exp && (exp.stage === 'count' || exp.stage === 'gen' || exp.stage === 'save')
+          ? h('div', { className: 'dsh-rel-bar' }, h('i', { style: { width: exp.stage === 'count' ? '20%' : exp.stage === 'gen' ? '65%' : '90%' } }))
+          : null,
         h('dl', { className: 'dsh-rel-kv' },
           h('div', null, h('dt', null, '消息'), h('dd', null, String(p.volume))),
           h('div', null, h('dt', null, '均衡'), h('dd', null, `${Math.round(p.reciprocity * 100)}%`)),
-          h('div', null, h('dt', null, '走势'), h('dd', null, p.slope.toFixed(2))),
-          h('div', null, h('dt', null, '最后'), h('dd', null, `${p.lastDays} 天前`)),
-          h('div', null, h('dt', null, '主动占比'), h('dd', null, `${Math.round(p.myShare * 100)}%`))),
-        iv ? h('dl', { className: 'dsh-rel-kv' },
-          h('div', null, h('dt', null, '我回复'), h('dd', null, fmtGap(iv.myGap))),
-          h('div', null, h('dt', null, 'TA 回复'), h('dd', null, fmtGap(iv.theirGap))),
-          h('div', null, h('dt', null, '未回复率'), h('dd', null, `${Math.round((iv.noReplyRate || 0) * 100)}%`)),
-          h('div', null, h('dt', null, '黏性'), h('dd', null, `${Math.round((iv.stick || 0) * 100)}%`))) : null,
+          h('div', null, h('dt', null, '未回复率'), h('dd', null, `${Math.round(((iv && iv.noReplyRate) || 0) * 100)}%`)),
+          h('div', null, h('dt', null, '黏性'), h('dd', null, `${Math.round(((iv && iv.stick) || 0) * 100)}%`))),
         r ? h('dl', { className: 'dsh-rel-kv' },
           h('div', null, h('dt', null, '我 P90'), h('dd', null, fmtGap(r.p90))),
           h('div', null, h('dt', null, '冷场'), h('dd', null, `${r.cold} 次`))) : null,
