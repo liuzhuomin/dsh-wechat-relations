@@ -429,8 +429,8 @@ window.__ModuleLoader__.load({
         h('dl', { className: 'dsh-rel-kv' },
           h('div', null, h('dt', null, '消息'), h('dd', null, String(p.volume))),
           h('div', null, h('dt', null, '均衡'), h('dd', null, `${Math.round(p.reciprocity * 100)}%`)),
-          h('div', null, h('dt', null, '未回复率'), h('dd', null, `${Math.round(((iv && iv.noReplyRate) || 0) * 100)}%`)),
-          h('div', null, h('dt', null, '黏性'), h('dd', null, `${Math.round(((iv && iv.stick) || 0) * 100)}%`))),
+          h('div', null, h('dt', null, '未回复率'), h('dd', null, `${Math.round((iv.noReplyRate || 0) * 100)}%`)),
+          h('div', null, h('dt', null, '黏性'), h('dd', null, `${Math.round((iv.stick || 0) * 100)}%`))),
         r ? h('dl', { className: 'dsh-rel-kv' },
           h('div', null, h('dt', null, '我 P90'), h('dd', null, fmtGap(r.p90))),
           h('div', null, h('dt', null, '冷场'), h('dd', null, `${r.cold} 次`))) : null,
@@ -534,6 +534,19 @@ window.__ModuleLoader__.load({
                   }, row, body)
                   : h('div', { key: it.label, className: 'dsh-rel-fact' }, row, body)
               })),
+            p.dynamics ? h('div', { className: 'dsh-rel-muted', style: { marginTop: 4 } },
+              `动力学：${p.dynamics.stage} · 会话 ${p.dynamics.sessions} 段 · 我发起 ${Math.round((p.dynamics.startShare || 0) * 100)}% · 我连发 ${Math.round((p.dynamics.doubleMe || 0) * 100)}% · 风格趋同 ${p.dynamics.lsm != null ? Math.round(p.dynamics.lsm * 100) + '%' : '—'} · 已读未回 ${Math.round((p.dynamics.unansweredRate || 0) * 100)}%`) : null,
+            p.importance ? h('div', { className: 'dsh-rel-muted' },
+              `重要度 ${p.importance.score}（按历史峰值）· 峰值 ${p.importance.peakMonth} · ${p.importance.peakMsgs30} 条 / 30 天 · 峰值后 ${p.importance.daysSincePeak} 天`) : null,
+            p.care ? h('div', { className: 'dsh-rel-muted' },
+              `我真正在意 ${props.careOverride != null ? props.careOverride : p.care.score}（置信度 ${p.care.confidence == null ? '—' : p.care.confidence}）${p.care.trend > 0.03 ? ' · 投入 ↑' : p.care.trend < -0.03 ? ' · 投入 ↓' : ''}${p.care.due ? ' · 该联系了' : ''}${p.social ? ` · 共同群 ${p.social.groups}` : ''}${p.care.manual ? ' · 已人工校准' : ''}`) : null,
+            p.care ? h('div', { className: 'dsh-rel-tags', style: { marginTop: 4, gap: 6 } },
+              [['care', '很在意'], ['normal', '一般'], ['dontcare', '不在意']].map(([v, label]) =>
+                h('button', {
+                  key: v, type: 'button', className: 'dsh-rel-fchip',
+                  style: { cursor: 'pointer' },
+                  onClick: () => props.onMarkCare && props.onMarkCare(p, v),
+                }, label))) : null,
             evKind ? h('div', { className: 'dsh-rel-events' },
               h('div', { className: 'dsh-rel-sub' },
                 `${evKind === 'start' ? '真发起' : '隔空承接'} · ${visible.length} 条（点同一行收起）`),
@@ -882,8 +895,9 @@ window.__ModuleLoader__.load({
     function View() {
       const [mode, setMode] = React.useState('network')
       const [query, setQuery] = React.useState('')
-      const [cat, setCat] = React.useState(null)
-      const [sortBy, setSortBy] = React.useState('mine-desc')
+      const [sortBy, setSortBy] = React.useState('importance-desc')
+      const [filters, setFilters] = React.useState({ role: null, tier: null, stage: null, stance: null })
+      const all = data('__REL_PEOPLE__', [])
       const affMap = React.useMemo(() => {
         const ins = data('__REL_INSIGHTS__', null)
         const m = {}
@@ -899,35 +913,152 @@ window.__ModuleLoader__.load({
         const v = affMap[p.id]
         return v && v[side] != null ? v[side] : -1
       }
+      const impOf = (p) => (p.importance && p.importance.score != null ? p.importance.score : null)
+      const careOf = (p) => (careEdits[p.id] != null ? careEdits[p.id] : (p.care && p.care.score != null ? p.care.score : null))
+      const markCare = async (p, value) => {
+        try {
+          const r = await fetch('/dsh-relationship/care', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ name: p.name, value }),
+          })
+          const j = await r.json()
+          if (j && j.ok) setCareEdits((m) => ({ ...m, [p.id]: j.score }))
+        } catch (e) { /* 静默失败，不打断阅读 */ }
+      }
+      const stageOf = (p) => (p.dynamics && p.dynamics.stage) || '未知'
+      const stanceOf = (p) => {
+        const v = affMap[p.id]
+        if (!v) return '未评估'
+        const d = v.mine - v.theirs
+        if (v.mine >= 60 && v.theirs >= 60) return '双向'
+        if (d >= 15) return '我主动'
+        if (d <= -15) return '对方主动'
+        if (v.mine < 35 && v.theirs < 35) return '冷淡'
+        return '平衡'
+      }
+      const insMap = React.useMemo(() => {
+        const ins = data('__REL_INSIGHTS__', null)
+        return (ins && ins.people) || {}
+      }, [])
+      const intentRawOf = (p) => {
+        const d = p.dynamics || {}
+        const iv = insMap[p.id] || {}
+        const e = p.emotion || {}
+        const a = affMap[p.id] || {}
+        if (a.mine == null) return 0
+        const rit = (d.rituals && d.rituals['晚安']) || {}
+        let s = 0
+        s += Math.min(1, ((rit.me || 0) + (rit.them || 0)) / 24) * 24
+        s += Math.min(1, (iv.endear || 0) / 16) * 20
+        s += (d.lsm || 0) * 16
+        s += Math.min(1, d.doubleMe || 0) * 10
+        s += Math.min(1, d.doubleThem || 0) * 6
+        s += (((e.me && e.me.valence) || 0) + 1) / 2 * 8
+        s += (((e.them && e.them.valence) || 0) + 1) / 2 * 6
+        if (d.stage === '升温') s += 6
+        if (d.stage === '沉寂') s *= 0.5
+        if (a.mine >= 50 && a.theirs >= 50) s += 4
+        if (['family', 'brother', 'ex'].includes(p.category)) s *= 0.25
+        return Math.round(Math.min(100, s))
+      }
+      // 意向分在全体关系里取百分位：原始分只用于排序，展示的是「比多少人更明显」
+      const intentPct = React.useMemo(() => {
+        const raw = {}
+        for (const p of all) raw[p.id] = intentRawOf(p)
+        const vals = Object.values(raw).sort((a, b) => a - b)
+        const n = vals.length || 1
+        const out = {}
+        for (const [id, v] of Object.entries(raw)) {
+          let lo = 0
+          let hi = n
+          while (lo < hi) {
+            const mid = (lo + hi) >> 1
+            if (vals[mid] < v) lo = mid + 1
+            else hi = mid
+          }
+          const left = lo
+          lo = 0
+          hi = n
+          while (lo < hi) {
+            const mid = (lo + hi) >> 1
+            if (vals[mid] <= v) lo = mid + 1
+            else hi = mid
+          }
+          out[id] = Math.round((100 * ((left + lo) / 2)) / n)
+        }
+        return out
+      }, [all])
+      const intentOf = (p) => intentPct[p.id] ?? 0
+      const closeOf = (p) => {
+        const d = p.dynamics || {}
+        const a = affMap[p.id] || {}
+        const imp = (p.importance && p.importance.score) || 0
+        if (a.mine == null) return false
+        return (d.stage === '升温' || d.stage === '稳定') && imp >= 75 && a.mine + a.theirs >= 110
+      }
+      const [quick, setQuick] = React.useState(null)
+      const [showFilters, setShowFilters] = React.useState(false)
+      const [careEdits, setCareEdits] = React.useState({})
       const [selectedId, setSelectedId] = React.useState(null)
       const [focus, setFocus] = React.useState(null)
-      const all = data('__REL_PEOPLE__', [])
+      // 关系层级按重要度排名切：核心 5 / 亲密 15 / 活跃 50 / 其余弱连接（Dunbar 分层）
+      const tierMap = React.useMemo(() => {
+        const ranked = all.filter((p) => impOf(p) != null).slice().sort((a, b) => impOf(b) - impOf(a))
+        const m = {}
+        ranked.forEach((p, i) => {
+          m[p.id] = i < 5 ? '核心圈' : i < 15 ? '亲密圈' : i < 50 ? '活跃圈' : '弱连接'
+        })
+        return m
+      }, [all])
+      const tierOf = (p) => tierMap[p.id] || '弱连接'
       const people = React.useMemo(() => {
         const q = query.trim()
         const list = all.filter((p) => {
-          if (cat && p.category !== cat) return false
           if (q && !p.name.includes(q)) return false
+          if (quick === 'close' && !closeOf(p)) return false
+          if (quick === 'intent' && intentOf(p) < 90) return false
+          if (quick === 'care' && !(careOf(p) != null && careOf(p) >= 85)) return false
+          if (quick === 'duty' && !(careOf(p) != null && careOf(p) <= 20)) return false
+          if (quick === 'due' && !(p.care && p.care.due)) return false
+          if (filters.role && p.category !== filters.role) return false
+          if (filters.tier && tierOf(p) !== filters.tier) return false
+          if (filters.stage && stageOf(p) !== filters.stage) return false
+          if (filters.stance && stanceOf(p) !== filters.stance) return false
           return true
         })
         const s = list.slice()
-        const val = (p) => {
-          const v = affMap[p.id]
-          return v && v[side] != null ? v[side] : -1
-        }
-        if (sortBy.indexOf('-desc') > 0) s.sort((a, b) => val(b) - val(a))
-        else if (sortBy.indexOf('-asc') > 0) s.sort((a, b) => val(a) - val(b))
+        const imp = (p) => impOf(p) ?? -1
+        const lastDays = (p) => (p.dynamics && p.dynamics.daysSince) ?? 9e9
+        if (sortBy === 'importance-desc') s.sort((a, b) => imp(b) - imp(a))
+        else if (sortBy.indexOf('-desc') > 0) s.sort((a, b) => affOf(b) - affOf(a))
+        else if (sortBy.indexOf('-asc') > 0) s.sort((a, b) => affOf(a) - affOf(b))
         else if (sortBy === 'volume-desc') s.sort((a, b) => b.volume - a.volume)
         else if (sortBy === 'volume-asc') s.sort((a, b) => a.volume - b.volume)
-        else if (sortBy === 'slope-desc') s.sort((a, b) => b.slope - a.slope)
-        else s.sort((a, b) => a.slope - b.slope)
+        else if (sortBy === 'last-asc') s.sort((a, b) => lastDays(a) - lastDays(b))
+        else if (sortBy === 'peak-desc') s.sort((a, b) => ((b.importance && b.importance.peakMsgs30) || 0) - ((a.importance && a.importance.peakMsgs30) || 0))
+        else s.sort((a, b) => b.slope - a.slope)
         return s
-      }, [all, query, cat, sortBy])
+      }, [all, query, filters, sortBy, quick])
       const selected = all.find((p) => p.id === selectedId) || null
       const counts = React.useMemo(() => {
         const m = {}
         for (const p of all) m[p.category] = (m[p.category] || 0) + 1
         return m
       }, [all])
+      const filterGroups = [
+        { key: 'role', label: '角色', opts: Object.keys(CAT_LABEL).filter((k) => counts[k]) },
+        { key: 'tier', label: '层级', opts: ['核心圈', '亲密圈', '活跃圈', '弱连接'] },
+        { key: 'stage', label: '阶段', opts: ['升温', '稳定', '降温', '沉寂', '单向'] },
+        { key: 'stance', label: '态势', opts: ['双向', '我主动', '对方主动', '平衡', '冷淡'] },
+      ]
+      const optLabel = (g, k) => (g.key === 'role' ? CAT_LABEL[k] : k)
+      const optCount = (g, k) => all.filter((p) => {
+        if (g.key === 'role') return p.category === k
+        if (g.key === 'tier') return tierOf(p) === k
+        if (g.key === 'stage') return stageOf(p) === k
+        return stanceOf(p) === k
+      }).length
 
       return h('div', { className: 'dsh-rel' },
         h('header', { className: 'dsh-rel-head' },
@@ -950,48 +1081,95 @@ window.__ModuleLoader__.load({
               className: 'dsh-rel-input', value: sortBy,
               onChange: (e) => setSortBy(e.currentTarget.value),
             },
+            h('option', { value: 'importance-desc' }, '重要度 ↓'),
             h('option', { value: 'mine-desc' }, '我在意 TA ↓'),
-            h('option', { value: 'mine-asc' }, '我在意 TA ↑'),
             h('option', { value: 'theirs-desc' }, 'TA 在意我 ↓'),
-            h('option', { value: 'theirs-asc' }, 'TA 在意我 ↑'),
+            h('option', { value: 'mine-asc' }, '我在意 TA ↑'),
             h('option', { value: 'volume-desc' }, '消息量 ↓'),
-            h('option', { value: 'volume-asc' }, '消息量 ↑'),
-            h('option', { value: 'slope-desc' }, '走势 ↓'),
-            h('option', { value: 'slope-asc' }, '走势 ↑')),
-            h('div', { className: 'dsh-rel-cats' },
-              h('button', {
-                type: 'button', className: 'dsh-rel-cat',
-                'data-active': cat === null ? 'true' : 'false',
-                onClick: () => setCat(null),
-              }, h('span', null, '全部'), h('b', null, all.length)),
-              Object.keys(CAT_LABEL).filter((k) => counts[k]).map((k) => h('button', {
-                key: k, type: 'button', className: 'dsh-rel-cat',
-                'data-active': cat === k ? 'true' : 'false',
-                onClick: () => setCat(cat === k ? null : k),
-              },
-              h('i', { style: { background: CAT_COLOR[k] } }),
-              h('span', null, CAT_LABEL[k]), h('b', null, counts[k])))),
+            h('option', { value: 'last-asc' }, '最近互动'),
+            h('option', { value: 'peak-desc' }, '峰值消息量 ↓'),
+            h('option', { value: 'slope-desc' }, '走势 ↓')),
+            h('div', { className: 'dsh-rel-filters' },
+              h('div', { className: 'dsh-rel-quick' },
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === null ? 'true' : 'false',
+                  onClick: () => setQuick(null),
+                }, '快捷：全部'),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === 'close' ? 'true' : 'false',
+                  onClick: () => setQuick(quick === 'close' ? null : 'close'),
+                }, `亲密关系 ${all.filter(closeOf).length}`),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === 'intent' ? 'true' : 'false',
+                  onClick: () => setQuick(quick === 'intent' ? null : 'intent'),
+                }, `有发展意向 ${all.filter((p) => intentOf(p) >= 90).length}`),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === 'care' ? 'true' : 'false',
+                  onClick: () => setQuick(quick === 'care' ? null : 'care'),
+                }, `我真正在意 ${all.filter((p) => careOf(p) != null && careOf(p) >= 85).length}`),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === 'duty' ? 'true' : 'false',
+                  onClick: () => setQuick(quick === 'duty' ? null : 'duty'),
+                }, `只是应酬 ${all.filter((p) => careOf(p) != null && careOf(p) <= 20).length}`),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === 'due' ? 'true' : 'false',
+                  onClick: () => setQuick(quick === 'due' ? null : 'due'),
+                }, `该联系了 ${all.filter((p) => p.care && p.care.due).length}`),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  onClick: () => setShowFilters((v) => !v),
+                }, showFilters ? '收起筛选' : '更多筛选')),
+              showFilters ? filterGroups.map((g) => h('div', { key: g.key, className: 'dsh-rel-fgroup' },
+                h('span', { className: 'dsh-rel-muted', style: { fontSize: 10 } }, g.label),
+                h('div', { className: 'dsh-rel-frow' },
+                  h('button', {
+                    type: 'button', className: 'dsh-rel-fchip',
+                    'data-on': filters[g.key] === null ? 'true' : 'false',
+                    onClick: () => setFilters((f) => ({ ...f, [g.key]: null })),
+                  }, '全部'),
+                  g.opts.map((k) => h('button', {
+                    key: k, type: 'button', className: 'dsh-rel-fchip',
+                    'data-on': filters[g.key] === k ? 'true' : 'false',
+                    onClick: () => setFilters((f) => ({ ...f, [g.key]: f[g.key] === k ? null : k })),
+                  }, `${optLabel(g, k)} ${optCount(g, k)}`))))) : null,
             h('div', { className: 'dsh-rel-list' },
-              people.map((p) => h('button', {
-                key: p.id, type: 'button', className: 'dsh-rel-item',
-                'data-active': p.id === selectedId ? 'true' : 'false',
-                onClick: () => setSelectedId(p.id),
-              },
-              h('span', null, p.name),
-              h('b', {
-                style: { color: affOf(p) < 0 ? "var(--dsw-alias-label-dimmed)" : levelColor(affOf(p)) },
-              }, affOf(p) < 0 ? "—" : String(affOf(p))))))),
+              people.length === 0
+                ? h('div', { className: 'dsh-rel-muted', style: { padding: '8px' } }, '没有符合筛选的人')
+                : people.map((p) => {
+                  const v = affMap[p.id]
+                  const imp = impOf(p)
+                  return h('div', {
+                    key: p.id, role: 'button', tabIndex: 0, className: 'dsh-rel-item',
+                    'data-active': p.id === selectedId ? 'true' : 'false',
+                    onClick: () => setSelectedId(p.id),
+                    onKeyDown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedId(p.id) } },
+                  },
+                  h('div', { className: 'dsh-rel-item-top' },
+                    h('span', { className: 'dsh-rel-item-name' }, p.name),
+                    h('span', { className: 'dsh-rel-item-stage', 'data-s': stageOf(p) }, stageOf(p))),
+                  h('div', { className: 'dsh-rel-item-meta' },
+                    `${CAT_LABEL[p.category] || '其他'} · 重要 ${imp == null ? '—' : imp} · 在意 ${v ? v.mine + '/' + v.theirs : '—'} · 意向 ${intentOf(p)} · ${p.volume} 条`),
+                  h('div', { className: 'dsh-rel-item-bar' }, h('i', { style: { width: `${imp || 0}%` } })))
+                })))),
           h('main', { className: 'dsh-rel-canvas' },
             focus ? h(FocusChat, { person: focus.person, kind: focus.kind, topic: focus.topic, from: focus.from, to: focus.to, onClose: () => setFocus(null) })
               : mode === 'scatter' ? h(Scatter, { people, selectedId, onSelect: setSelectedId })
               : mode === 'network' ? h(Network, { people, selectedId, onSelect: setSelectedId })
               : mode === 'graph' ? h(Graph, null)
-              : mode === 'board' ? h(Board, { people, onPick: (k) => { setCat(k); setMode('scatter') } })
+              : mode === 'board' ? h(Board, { people, onPick: (k) => { setFilters((f) => ({ ...f, role: k })); setMode('scatter') } })
                 : mode === 'timeline' ? h(Timeline, { people })
                   : mode === 'insights' ? h(Insights, { onSelect: setSelectedId })
                     : h(Me, null)),
           selected ? h(Detail, {
             person: selected,
+            careOverride: careEdits[selected.id],
+            onMarkCare: markCare,
             onFocus: (kind, extra) => {
               const isTopic = ['work', 'love', 'food', 'game', 'family'].includes(kind)
               setFocus({
@@ -1014,7 +1192,7 @@ window.__ModuleLoader__.load({
 .dsh-rel-mode{height:26px;padding:0 10px;border:1px solid var(--dsw-alias-border-l2);border-radius:var(--dsw-radius-sm);background:0 0;color:var(--dsw-alias-label-tertiary);font:inherit;font-size:12px;cursor:pointer}
 .dsh-rel-mode[data-active=true]{color:var(--dsw-alias-label-primary);border-color:var(--dsw-alias-brand-primary)}
 .dsh-rel-body{display:flex;flex:1;min-height:0;border-top:1px solid var(--dsw-alias-border-l1)}
-.dsh-rel-side{width:260px;flex:none;display:flex;flex-direction:column;gap:6px;padding:10px;border-right:1px solid var(--dsw-alias-border-l1);min-height:0}
+.dsh-rel-side{width:340px;flex:none;display:flex;flex-direction:column;gap:6px;padding:10px;border-right:1px solid var(--dsw-alias-border-l1);min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
 .dsh-rel-input{height:28px;padding:0 8px;border:1px solid var(--dsw-alias-border-l2);border-radius:var(--dsw-radius-sm);background:var(--dsw-alias-bg-layer-1);color:var(--dsw-alias-label-primary);font:inherit;font-size:12px}
 .dsh-rel-cats{display:flex;flex-direction:column;gap:2px}
 .dsh-rel-cat{display:flex;align-items:center;gap:6px;padding:5px 8px;border:0;border-radius:var(--dsw-radius-sm);background:0 0;color:var(--dsw-alias-label-secondary);font:inherit;font-size:12px;cursor:pointer;text-align:left}
@@ -1022,10 +1200,28 @@ window.__ModuleLoader__.load({
 .dsh-rel-cat i{width:7px;height:7px;border-radius:50%}
 .dsh-rel-cat span{flex:1}
 .dsh-rel-cat b{color:var(--dsw-alias-label-tertiary);font-size:11px}
-.dsh-rel-list{flex:1;min-height:0;overflow:auto;display:flex;flex-direction:column;gap:1px}
+.dsh-rel-list{flex:none;min-height:0;overflow:visible;display:flex;flex-direction:column;gap:2px}
 .dsh-rel-item{display:flex;justify-content:space-between;gap:8px;padding:5px 8px;border:0;border-radius:var(--dsw-radius-sm);background:0 0;color:var(--dsw-alias-label-secondary);font:inherit;font-size:12px;cursor:pointer;text-align:left}
 .dsh-rel-item[data-active=true]{background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary)}
 .dsh-rel-item b{color:var(--dsw-alias-label-tertiary);font-size:11px}
+.dsh-rel-filters{display:flex;flex-direction:column;gap:5px;margin:2px 0 4px;flex:none}
+.dsh-rel-quick{display:flex;gap:4px;flex-wrap:wrap;padding-bottom:3px;border-bottom:1px dashed var(--dsw-alias-border-l1);margin-bottom:2px}
+.dsh-rel-fgroup{display:flex;flex-direction:column;gap:3px}
+.dsh-rel-frow{display:flex;flex-wrap:nowrap;gap:4px;overflow-x:auto;padding-bottom:3px;scrollbar-width:thin}
+.dsh-rel-fchip{flex:none;appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;height:auto;min-height:0;font:inherit;font-size:10.5px;line-height:1.5;letter-spacing:normal;text-transform:none;padding:1px 7px;border:1px solid var(--dsw-alias-border-l2);border-radius:999px;background:0 0;box-shadow:none;color:var(--dsw-alias-label-tertiary);cursor:pointer}
+.dsh-rel-fchip[data-on=true]{color:var(--dsw-alias-label-primary);border-color:var(--dsw-alias-brand-primary);background:var(--dsw-alias-interactive-bg-hover)}
+.dsh-rel-item{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto auto;gap:2px 8px;align-items:baseline;height:auto;min-height:0;line-height:1.35;padding:7px 8px;border:0;border-radius:var(--dsw-radius-sm);background:0 0;color:var(--dsw-alias-label-secondary);font:inherit;font-size:12px;font-weight:400;letter-spacing:normal;text-align:left;cursor:pointer;flex:none;user-select:none}
+.dsh-rel-item[data-active=true]{background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary)}
+.dsh-rel-item-top{display:contents}
+.dsh-rel-item-name{grid-column:1;grid-row:1;min-width:0;font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dsh-rel-item-stage{grid-column:2;grid-row:1;font-size:10px;color:var(--dsw-alias-label-tertiary);white-space:nowrap}
+.dsh-rel-item-stage[data-s=升温]{color:var(--dsw-alias-state-success-primary)}
+.dsh-rel-item-stage[data-s=降温]{color:var(--dsw-alias-state-warn-primary)}
+.dsh-rel-item-stage[data-s=沉寂]{color:var(--dsw-alias-label-dimmed)}
+.dsh-rel-item-stage[data-s=单向]{color:var(--dsw-alias-state-error-primary)}
+.dsh-rel-item-meta{grid-column:1/-1;grid-row:2;font-size:10.5px;color:var(--dsw-alias-label-tertiary);font-variant-numeric:tabular-nums;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dsh-rel-item-bar{grid-column:1/-1;grid-row:3;height:2px;width:100%;background:var(--dsw-alias-border-l1);border-radius:999px;overflow:hidden;margin-top:2px}
+.dsh-rel-item-bar i{display:block;height:100%;background:var(--dsw-alias-brand-primary)}
 .dsh-rel-canvas{flex:1;min-width:0;display:flex;flex-direction:column;padding:10px 12px;min-height:0;overflow:auto}
 .dsh-rel-svg{flex:1;width:100%;min-height:0}
 .dsh-rel-plot{fill:var(--dsw-alias-bg-layer-1);opacity:.5}

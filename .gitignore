@@ -11,6 +11,8 @@ decrypted/
 .env
 .env.*
 decision-engine.json
+care_overrides.json
+care_weights.json
 templates-user.json
 
 # 本地构建缓存

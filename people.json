@@ -86,6 +86,60 @@
           "delta": 16
         }
       ]
+    },
+    "scores": {
+      "respond": 75,
+      "boundary": 66,
+      "sustain": 28
+    },
+    "importance": {
+      "score": 79,
+      "peakMonth": "2025-01",
+      "peakMsgs30": 805,
+      "peakSessions30": 161,
+      "daysSincePeak": 230,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "升温",
+      "sessions": 805,
+      "startShare": 0.627,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.6,
+      "unansweredRate": 0.08,
+      "daysSince": 230
+    },
+    "care": {
+      "score": 52,
+      "confidence": 40,
+      "trend": 0.08,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 2684,
+      "topGroups": [
+        {
+          "name": "圈子 1",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -173,6 +227,58 @@
           "from": 59,
           "to": 37,
           "delta": -22
+        }
+      ]
+    },
+    "scores": {
+      "respond": 58,
+      "boundary": 37,
+      "sustain": 86
+    },
+    "importance": {
+      "score": 82,
+      "peakMonth": "2025-02",
+      "peakMsgs30": 690,
+      "peakSessions30": 138,
+      "daysSincePeak": 176,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "稳定",
+      "sessions": 690,
+      "startShare": 0.473,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.66,
+      "unansweredRate": 0.15,
+      "daysSince": 176
+    },
+    "care": {
+      "score": 61,
+      "confidence": 47,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 2301,
+      "topGroups": [
+        {
+          "name": "圈子 2",
+          "msgs": 120
         }
       ]
     }
@@ -264,6 +370,58 @@
           "delta": -2
         }
       ]
+    },
+    "scores": {
+      "respond": 80,
+      "boundary": 64,
+      "sustain": 78
+    },
+    "importance": {
+      "score": 87,
+      "peakMonth": "2025-03",
+      "peakMsgs30": 857,
+      "peakSessions30": 171,
+      "daysSincePeak": 77,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "降温",
+      "sessions": 857,
+      "startShare": 0.544,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.72,
+      "unansweredRate": 0.22,
+      "daysSince": 77
+    },
+    "care": {
+      "score": 64,
+      "confidence": 54,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 2856,
+      "topGroups": [
+        {
+          "name": "圈子 3",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -351,6 +509,60 @@
           "from": 72,
           "to": 57,
           "delta": -15
+        }
+      ]
+    },
+    "scores": {
+      "respond": 54,
+      "boundary": 61,
+      "sustain": 57
+    },
+    "importance": {
+      "score": 85,
+      "peakMonth": "2025-04",
+      "peakMsgs30": 179,
+      "peakSessions30": 36,
+      "daysSincePeak": 113,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "沉寂",
+      "sessions": 179,
+      "startShare": 0.341,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.78,
+      "unansweredRate": 0.08,
+      "daysSince": 113
+    },
+    "care": {
+      "score": 64,
+      "confidence": 61,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 598,
+      "topGroups": [
+        {
+          "name": "圈子 4",
+          "msgs": 120
         }
       ]
     }
@@ -442,6 +654,58 @@
           "delta": 24
         }
       ]
+    },
+    "scores": {
+      "respond": 32,
+      "boundary": 80,
+      "sustain": 75
+    },
+    "importance": {
+      "score": 90,
+      "peakMonth": "2025-05",
+      "peakMsgs30": 233,
+      "peakSessions30": 47,
+      "daysSincePeak": 224,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "单向",
+      "sessions": 233,
+      "startShare": 0.562,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.84,
+      "unansweredRate": 0.15,
+      "daysSince": 224
+    },
+    "care": {
+      "score": 57,
+      "confidence": 68,
+      "trend": 0,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 777,
+      "topGroups": [
+        {
+          "name": "圈子 5",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -529,6 +793,58 @@
           "from": 56,
           "to": 40,
           "delta": -16
+        }
+      ]
+    },
+    "scores": {
+      "respond": 68,
+      "boundary": 33,
+      "sustain": 45
+    },
+    "importance": {
+      "score": 79,
+      "peakMonth": "2025-06",
+      "peakMsgs30": 793,
+      "peakSessions30": 159,
+      "daysSincePeak": 110,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "升温",
+      "sessions": 793,
+      "startShare": 0.308,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.6,
+      "unansweredRate": 0.22,
+      "daysSince": 110
+    },
+    "care": {
+      "score": 85,
+      "confidence": 75,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 2644,
+      "topGroups": [
+        {
+          "name": "圈子 6",
+          "msgs": 120
         }
       ]
     }
@@ -620,6 +936,60 @@
           "delta": 3
         }
       ]
+    },
+    "scores": {
+      "respond": 72,
+      "boundary": 43,
+      "sustain": 90
+    },
+    "importance": {
+      "score": 83,
+      "peakMonth": "2025-07",
+      "peakMsgs30": 735,
+      "peakSessions30": 147,
+      "daysSincePeak": 191,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "稳定",
+      "sessions": 735,
+      "startShare": 0.679,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.66,
+      "unansweredRate": 0.08,
+      "daysSince": 191
+    },
+    "care": {
+      "score": 50,
+      "confidence": 82,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 2449,
+      "topGroups": [
+        {
+          "name": "圈子 1",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -707,6 +1077,58 @@
           "from": 49,
           "to": 35,
           "delta": -14
+        }
+      ]
+    },
+    "scores": {
+      "respond": 29,
+      "boundary": 93,
+      "sustain": 51
+    },
+    "importance": {
+      "score": 87,
+      "peakMonth": "2025-08",
+      "peakMsgs30": 732,
+      "peakSessions30": 146,
+      "daysSincePeak": 167,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "降温",
+      "sessions": 732,
+      "startShare": 0.375,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.72,
+      "unansweredRate": 0.15,
+      "daysSince": 167
+    },
+    "care": {
+      "score": 81,
+      "confidence": 89,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 2441,
+      "topGroups": [
+        {
+          "name": "圈子 2",
+          "msgs": 120
         }
       ]
     }
@@ -798,6 +1220,58 @@
           "delta": -17
         }
       ]
+    },
+    "scores": {
+      "respond": 60,
+      "boundary": 94,
+      "sustain": 52
+    },
+    "importance": {
+      "score": 89,
+      "peakMonth": "2025-09",
+      "peakMsgs30": 561,
+      "peakSessions30": 112,
+      "daysSincePeak": 218,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "沉寂",
+      "sessions": 561,
+      "startShare": 0.496,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.78,
+      "unansweredRate": 0.22,
+      "daysSince": 218
+    },
+    "care": {
+      "score": 16,
+      "confidence": 41,
+      "trend": 0,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 1870,
+      "topGroups": [
+        {
+          "name": "圈子 3",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -885,6 +1359,60 @@
           "from": 53,
           "to": 43,
           "delta": -10
+        }
+      ]
+    },
+    "scores": {
+      "respond": 78,
+      "boundary": 30,
+      "sustain": 75
+    },
+    "importance": {
+      "score": 96,
+      "peakMonth": "2025-10",
+      "peakMsgs30": 896,
+      "peakSessions30": 179,
+      "daysSincePeak": 44,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "单向",
+      "sessions": 896,
+      "startShare": 0.542,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.84,
+      "unansweredRate": 0.08,
+      "daysSince": 44
+    },
+    "care": {
+      "score": 65,
+      "confidence": 48,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 2987,
+      "topGroups": [
+        {
+          "name": "圈子 4",
+          "msgs": 120
         }
       ]
     }
@@ -976,6 +1504,58 @@
           "delta": -34
         }
       ]
+    },
+    "scores": {
+      "respond": 65,
+      "boundary": 92,
+      "sustain": 32
+    },
+    "importance": {
+      "score": 78,
+      "peakMonth": "2025-11",
+      "peakMsgs30": 613,
+      "peakSessions30": 123,
+      "daysSincePeak": 65,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "升温",
+      "sessions": 613,
+      "startShare": 0.414,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.6,
+      "unansweredRate": 0.15,
+      "daysSince": 65
+    },
+    "care": {
+      "score": 29,
+      "confidence": 55,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 2042,
+      "topGroups": [
+        {
+          "name": "圈子 5",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1063,6 +1643,58 @@
           "from": 66,
           "to": 63,
           "delta": -3
+        }
+      ]
+    },
+    "scores": {
+      "respond": 74,
+      "boundary": 54,
+      "sustain": 46
+    },
+    "importance": {
+      "score": 80,
+      "peakMonth": "2025-12",
+      "peakMsgs30": 385,
+      "peakSessions30": 77,
+      "daysSincePeak": 221,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "稳定",
+      "sessions": 385,
+      "startShare": 0.41,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.66,
+      "unansweredRate": 0.22,
+      "daysSince": 221
+    },
+    "care": {
+      "score": 47,
+      "confidence": 62,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 1284,
+      "topGroups": [
+        {
+          "name": "圈子 6",
+          "msgs": 120
         }
       ]
     }
@@ -1154,6 +1786,60 @@
           "delta": -9
         }
       ]
+    },
+    "scores": {
+      "respond": 87,
+      "boundary": 38,
+      "sustain": 29
+    },
+    "importance": {
+      "score": 87,
+      "peakMonth": "2025-01",
+      "peakMsgs30": 889,
+      "peakSessions30": 178,
+      "daysSincePeak": 212,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "降温",
+      "sessions": 889,
+      "startShare": 0.431,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.72,
+      "unansweredRate": 0.08,
+      "daysSince": 212
+    },
+    "care": {
+      "score": 22,
+      "confidence": 69,
+      "trend": 0.08,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 2963,
+      "topGroups": [
+        {
+          "name": "圈子 1",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1241,6 +1927,58 @@
           "from": 49,
           "to": 46,
           "delta": -3
+        }
+      ]
+    },
+    "scores": {
+      "respond": 88,
+      "boundary": 26,
+      "sustain": 34
+    },
+    "importance": {
+      "score": 82,
+      "peakMonth": "2025-02",
+      "peakMsgs30": 99,
+      "peakSessions30": 20,
+      "daysSincePeak": 218,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "沉寂",
+      "sessions": 99,
+      "startShare": 0.377,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.78,
+      "unansweredRate": 0.15,
+      "daysSince": 218
+    },
+    "care": {
+      "score": 69,
+      "confidence": 76,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 330,
+      "topGroups": [
+        {
+          "name": "圈子 2",
+          "msgs": 120
         }
       ]
     }
@@ -1332,6 +2070,58 @@
           "delta": -30
         }
       ]
+    },
+    "scores": {
+      "respond": 57,
+      "boundary": 71,
+      "sustain": 44
+    },
+    "importance": {
+      "score": 93,
+      "peakMonth": "2025-03",
+      "peakMsgs30": 491,
+      "peakSessions30": 98,
+      "daysSincePeak": 179,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "单向",
+      "sessions": 491,
+      "startShare": 0.548,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.84,
+      "unansweredRate": 0.22,
+      "daysSince": 179
+    },
+    "care": {
+      "score": 67,
+      "confidence": 83,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 1635,
+      "topGroups": [
+        {
+          "name": "圈子 3",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1419,6 +2209,60 @@
           "from": 43,
           "to": 41,
           "delta": -2
+        }
+      ]
+    },
+    "scores": {
+      "respond": 49,
+      "boundary": 85,
+      "sustain": 40
+    },
+    "importance": {
+      "score": 66,
+      "peakMonth": "2025-04",
+      "peakMsgs30": 38,
+      "peakSessions30": 8,
+      "daysSincePeak": 35,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "升温",
+      "sessions": 38,
+      "startShare": 0.444,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.6,
+      "unansweredRate": 0.08,
+      "daysSince": 35
+    },
+    "care": {
+      "score": 85,
+      "confidence": 90,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 127,
+      "topGroups": [
+        {
+          "name": "圈子 4",
+          "msgs": 120
         }
       ]
     }
@@ -1510,6 +2354,58 @@
           "delta": 1
         }
       ]
+    },
+    "scores": {
+      "respond": 45,
+      "boundary": 52,
+      "sustain": 76
+    },
+    "importance": {
+      "score": 79,
+      "peakMonth": "2025-05",
+      "peakMsgs30": 317,
+      "peakSessions30": 63,
+      "daysSincePeak": 206,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "稳定",
+      "sessions": 317,
+      "startShare": 0.366,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.66,
+      "unansweredRate": 0.15,
+      "daysSince": 206
+    },
+    "care": {
+      "score": 59,
+      "confidence": 42,
+      "trend": 0,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 1056,
+      "topGroups": [
+        {
+          "name": "圈子 5",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1597,6 +2493,58 @@
           "from": 46,
           "to": 49,
           "delta": 3
+        }
+      ]
+    },
+    "scores": {
+      "respond": 28,
+      "boundary": 92,
+      "sustain": 64
+    },
+    "importance": {
+      "score": 81,
+      "peakMonth": "2025-06",
+      "peakMsgs30": 202,
+      "peakSessions30": 40,
+      "daysSincePeak": 152,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "降温",
+      "sessions": 202,
+      "startShare": 0.612,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.72,
+      "unansweredRate": 0.22,
+      "daysSince": 152
+    },
+    "care": {
+      "score": 68,
+      "confidence": 49,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 673,
+      "topGroups": [
+        {
+          "name": "圈子 6",
+          "msgs": 120
         }
       ]
     }
@@ -1688,6 +2636,60 @@
           "delta": 23
         }
       ]
+    },
+    "scores": {
+      "respond": 50,
+      "boundary": 50,
+      "sustain": 56
+    },
+    "importance": {
+      "score": 88,
+      "peakMonth": "2025-07",
+      "peakMsgs30": 368,
+      "peakSessions30": 74,
+      "daysSincePeak": 53,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "沉寂",
+      "sessions": 368,
+      "startShare": 0.683,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.78,
+      "unansweredRate": 0.08,
+      "daysSince": 53
+    },
+    "care": {
+      "score": 72,
+      "confidence": 56,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 1228,
+      "topGroups": [
+        {
+          "name": "圈子 1",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1775,6 +2777,58 @@
           "from": 60,
           "to": 69,
           "delta": 9
+        }
+      ]
+    },
+    "scores": {
+      "respond": 94,
+      "boundary": 47,
+      "sustain": 34
+    },
+    "importance": {
+      "score": 94,
+      "peakMonth": "2025-08",
+      "peakMsgs30": 591,
+      "peakSessions30": 118,
+      "daysSincePeak": 89,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "单向",
+      "sessions": 591,
+      "startShare": 0.479,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.84,
+      "unansweredRate": 0.15,
+      "daysSince": 89
+    },
+    "care": {
+      "score": 71,
+      "confidence": 63,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 1970,
+      "topGroups": [
+        {
+          "name": "圈子 2",
+          "msgs": 120
         }
       ]
     }
@@ -1866,6 +2920,58 @@
           "delta": -41
         }
       ]
+    },
+    "scores": {
+      "respond": 72,
+      "boundary": 65,
+      "sustain": 53
+    },
+    "importance": {
+      "score": 78,
+      "peakMonth": "2025-09",
+      "peakMsgs30": 645,
+      "peakSessions30": 129,
+      "daysSincePeak": 200,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "升温",
+      "sessions": 645,
+      "startShare": 0.3,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.6,
+      "unansweredRate": 0.22,
+      "daysSince": 200
+    },
+    "care": {
+      "score": 64,
+      "confidence": 70,
+      "trend": 0,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 2149,
+      "topGroups": [
+        {
+          "name": "圈子 3",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1953,6 +3059,60 @@
           "from": 43,
           "to": 52,
           "delta": 9
+        }
+      ]
+    },
+    "scores": {
+      "respond": 38,
+      "boundary": 89,
+      "sustain": 93
+    },
+    "importance": {
+      "score": 79,
+      "peakMonth": "2025-10",
+      "peakMsgs30": 305,
+      "peakSessions30": 61,
+      "daysSincePeak": 86,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "稳定",
+      "sessions": 305,
+      "startShare": 0.446,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.66,
+      "unansweredRate": 0.08,
+      "daysSince": 86
+    },
+    "care": {
+      "score": 86,
+      "confidence": 77,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 1016,
+      "topGroups": [
+        {
+          "name": "圈子 4",
+          "msgs": 120
         }
       ]
     }
@@ -2044,6 +3204,58 @@
           "delta": -14
         }
       ]
+    },
+    "scores": {
+      "respond": 42,
+      "boundary": 29,
+      "sustain": 67
+    },
+    "importance": {
+      "score": 82,
+      "peakMonth": "2025-11",
+      "peakMsgs30": 246,
+      "peakSessions30": 49,
+      "daysSincePeak": 167,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "降温",
+      "sessions": 246,
+      "startShare": 0.418,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.72,
+      "unansweredRate": 0.15,
+      "daysSince": 167
+    },
+    "care": {
+      "score": 70,
+      "confidence": 84,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 821,
+      "topGroups": [
+        {
+          "name": "圈子 5",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -2131,6 +3343,58 @@
           "from": 76,
           "to": 47,
           "delta": -29
+        }
+      ]
+    },
+    "scores": {
+      "respond": 69,
+      "boundary": 78,
+      "sustain": 29
+    },
+    "importance": {
+      "score": 86,
+      "peakMonth": "2025-12",
+      "peakMsgs30": 244,
+      "peakSessions30": 49,
+      "daysSincePeak": 143,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "沉寂",
+      "sessions": 244,
+      "startShare": 0.514,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.78,
+      "unansweredRate": 0.22,
+      "daysSince": 143
+    },
+    "care": {
+      "score": 89,
+      "confidence": 91,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 813,
+      "topGroups": [
+        {
+          "name": "圈子 6",
+          "msgs": 120
         }
       ]
     }

@@ -5,7 +5,7 @@
  * 挂载或调用失败时返回 500，客户端会回落到「复制提示词」，不会白点。
  */
 import { readFile } from 'node:fs/promises'
-import { existsSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { spawn } from 'node:child_process'
@@ -320,6 +320,45 @@ export function apply(ctx) {
           return { engine: 'default' }
         }
       }
+      web.register({ kind: 'exact', path: '/dsh-relationship/people', handler: async (req, res) => {
+        try {
+          const ppl = JSON.parse(await readFile(join(DIR, 'people.json'), 'utf8'))
+          send(res, 200, { ok: true, people: ppl })
+        } catch (e) {
+          send(res, 500, { ok: false, error: String((e && e.message) || e) })
+        }
+      } })
+      web.register({ kind: 'exact', path: '/dsh-relationship/care', handler: async (req, res) => {
+        if (req.method !== 'POST') return send(res, 405, { ok: false, error: 'POST only' })
+        try {
+          const body = await readBody(req)
+          const name = String(body.name || '').trim()
+          const value = body.value
+          if (!name) return send(res, 400, { ok: false, error: 'name required' })
+          const ovPath = process.env.DSH_REL_CARE_OVERRIDES || join(DIR, 'care_overrides.json')
+          let ov = {}
+          try { ov = JSON.parse(readFileSync(ovPath, 'utf8')) } catch {}
+          if (value === 'normal' || value == null) delete ov[name]
+          else if (value === 'care' || value === 'dontcare' || typeof value === 'number') ov[name] = value
+          writeFileSync(ovPath, JSON.stringify(ov, null, 2), 'utf8')
+
+          const ppl = JSON.parse(await readFile(join(DIR, 'people.json'), 'utf8'))
+          const target = ppl.find((p) => p.name === name)
+          let score = null
+          if (target && target.care) {
+            if (value === 'care') score = Math.max(target.care.score, 95)
+            else if (value === 'dontcare') score = Math.min(target.care.score, 5)
+            else if (typeof value === 'number') score = Math.round(value)
+            else score = target.care.score
+            target.care.score = score
+            target.care.manual = value !== 'normal' && value != null
+            writeFileSync(join(DIR, 'people.json'), JSON.stringify(ppl), 'utf8')
+          }
+          send(res, 200, { ok: true, score })
+        } catch (e) {
+          send(res, 500, { ok: false, error: String((e && e.message) || e) })
+        }
+      } })
       web.register({ kind: 'exact', path: '/dsh-relationship/engine', handler: async (req, res) => {
         try {
           if (req.method === 'POST') {

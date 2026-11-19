@@ -58,9 +58,52 @@ const people = Array.from({ length: 24 }).map((_, i) => {
   }
 })
 
-const person = (id) => ({
-  name: id,
-  topics: { work: 0.4, life: 0.3, food: 0.2, love: 0.1 },
+// 给演示数据补上「重要度 / 动态 / 主观在意 / 群社交」四块，让新面板有内容可看
+people.forEach((p, i) => {
+  p.scores = p.health
+  const imp = Math.max(30, Math.min(99, Math.round(40 + Math.log10(p.volume) * 10 + (i % 5) * 4)))
+  p.importance = {
+    score: imp,
+    peakMonth: `2025-${String((i % 12) + 1).padStart(2, '0')}`,
+    peakMsgs30: Math.round(p.volume * 0.1),
+    peakSessions30: Math.round(p.volume * 0.02),
+    daysSincePeak: p.lastDays,
+    weights: { peak: 0.6, sessions: 0.25, volume: 0.15 },
+  }
+  p.dynamics = {
+    stage: ['升温', '稳定', '降温', '沉寂', '单向'][i % 5],
+    sessions: Math.round(p.volume / 10),
+    startShare: p.myShare,
+    doubleMe: Number((0.2 + (i % 4) * 0.12).toFixed(2)),
+    doubleThem: 0.2,
+    lsm: Number((0.6 + (i % 5) * 0.06).toFixed(2)),
+    unansweredRate: Number((0.08 + (i % 3) * 0.07).toFixed(2)),
+    daysSince: p.lastDays,
+  }
+  const care = Math.max(0, Math.min(99, Math.round((p.mine + p.theirs) / 2 + (i % 7) - (p.lastDays > 180 ? 20 : 0))))
+  p.care = {
+    score: care,
+    confidence: 40 + ((i * 7) % 55),
+    trend: i % 3 === 0 ? 0.08 : 0,
+    due: i % 4 === 0 && p.lastDays >= 30 && p.lastDays <= 365,
+    pos: ['主动开话题', '聊生活多过聊工作'],
+    neg: i % 3 === 0 ? ['偶尔回得慢'] : [],
+    signals: { deep: 0.5 },
+    manual: false,
+  }
+  p.social = {
+    groups: i % 4,
+    groupMsgs: Math.round(p.volume / 3),
+    topGroups: [{ name: `圈子 ${(i % 6) + 1}`, msgs: 120 }],
+  }
+})
+
+const person = (p) => ({
+  name: p.title,
+  id: p.id,
+  affinity: { mine: p.mine, theirs: p.theirs, parts: {} },
+  endear: Math.round(p.volume / 400),
+  topics: { work: 0.3, life: 0.3, food: 0.2, love: 0.15, family: 0.05 },
   empathyDelay: 3600,
   empathyWarmth: 0.6,
   requests: 12,
@@ -71,7 +114,7 @@ const person = (id) => ({
 })
 
 const insights = { people: {} }
-people.forEach((p) => { insights.people[p.id] = person(p.id) })
+people.forEach((p) => { insights.people[p.id] = person(p) })
 
 const graph = {
   groups: Array.from({ length: 6 }).map((_, i) => ({

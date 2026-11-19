@@ -1,12 +1,20 @@
 {
   "people": {
     "demo_001": {
-      "name": "demo_001",
+      "name": "小林·同事",
+      "id": "demo_001",
+      "affinity": {
+        "mine": 80,
+        "theirs": 63,
+        "parts": {}
+      },
+      "endear": 20,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -17,12 +25,20 @@
       "burstTop": 60
     },
     "demo_002": {
-      "name": "demo_002",
+      "name": "阿May·同学",
+      "id": "demo_002",
+      "affinity": {
+        "mine": 29,
+        "theirs": 90,
+        "parts": {}
+      },
+      "endear": 17,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -33,12 +49,20 @@
       "burstTop": 60
     },
     "demo_003": {
-      "name": "demo_003",
+      "name": "老王·球友",
+      "id": "demo_003",
+      "affinity": {
+        "mine": 61,
+        "theirs": 63,
+        "parts": {}
+      },
+      "endear": 21,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -49,12 +73,20 @@
       "burstTop": 60
     },
     "demo_004": {
-      "name": "demo_004",
+      "name": "陈陈·前同事",
+      "id": "demo_004",
+      "affinity": {
+        "mine": 79,
+        "theirs": 42,
+        "parts": {}
+      },
+      "endear": 4,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -65,12 +97,20 @@
       "burstTop": 60
     },
     "demo_005": {
-      "name": "demo_005",
+      "name": "Summer·客户",
+      "id": "demo_005",
+      "affinity": {
+        "mine": 62,
+        "theirs": 83,
+        "parts": {}
+      },
+      "endear": 6,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -81,12 +121,20 @@
       "burstTop": 60
     },
     "demo_006": {
-      "name": "demo_006",
+      "name": "大鹏·发小",
+      "id": "demo_006",
+      "affinity": {
+        "mine": 70,
+        "theirs": 90,
+        "parts": {}
+      },
+      "endear": 20,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -97,12 +145,20 @@
       "burstTop": 60
     },
     "demo_007": {
-      "name": "demo_007",
+      "name": "周周·同事",
+      "id": "demo_007",
+      "affinity": {
+        "mine": 83,
+        "theirs": 44,
+        "parts": {}
+      },
+      "endear": 18,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -113,12 +169,20 @@
       "burstTop": 60
     },
     "demo_008": {
-      "name": "demo_008",
+      "name": "Vivi·同学",
+      "id": "demo_008",
+      "affinity": {
+        "mine": 81,
+        "theirs": 81,
+        "parts": {}
+      },
+      "endear": 18,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -129,12 +193,20 @@
       "burstTop": 60
     },
     "demo_009": {
-      "name": "demo_009",
+      "name": "阿哲·球友",
+      "id": "demo_009",
+      "affinity": {
+        "mine": 45,
+        "theirs": 25,
+        "parts": {}
+      },
+      "endear": 14,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -145,12 +217,20 @@
       "burstTop": 60
     },
     "demo_010": {
-      "name": "demo_010",
+      "name": "小满·前同事",
+      "id": "demo_010",
+      "affinity": {
+        "mine": 34,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 22,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -161,12 +241,20 @@
       "burstTop": 60
     },
     "demo_011": {
-      "name": "demo_011",
+      "name": "小林·客户",
+      "id": "demo_011",
+      "affinity": {
+        "mine": 27,
+        "theirs": 25,
+        "parts": {}
+      },
+      "endear": 15,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -177,12 +265,20 @@
       "burstTop": 60
     },
     "demo_012": {
-      "name": "demo_012",
+      "name": "阿May·发小",
+      "id": "demo_012",
+      "affinity": {
+        "mine": 84,
+        "theirs": 42,
+        "parts": {}
+      },
+      "endear": 10,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -193,12 +289,20 @@
       "burstTop": 60
     },
     "demo_013": {
-      "name": "demo_013",
+      "name": "老王·同事",
+      "id": "demo_013",
+      "affinity": {
+        "mine": 28,
+        "theirs": 45,
+        "parts": {}
+      },
+      "endear": 22,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -209,12 +313,20 @@
       "burstTop": 60
     },
     "demo_014": {
-      "name": "demo_014",
+      "name": "陈陈·同学",
+      "id": "demo_014",
+      "affinity": {
+        "mine": 75,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 2,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -225,12 +337,20 @@
       "burstTop": 60
     },
     "demo_015": {
-      "name": "demo_015",
+      "name": "Summer·球友",
+      "id": "demo_015",
+      "affinity": {
+        "mine": 49,
+        "theirs": 84,
+        "parts": {}
+      },
+      "endear": 12,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -241,12 +361,20 @@
       "burstTop": 60
     },
     "demo_016": {
-      "name": "demo_016",
+      "name": "大鹏·前同事",
+      "id": "demo_016",
+      "affinity": {
+        "mine": 86,
+        "theirs": 81,
+        "parts": {}
+      },
+      "endear": 1,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -257,12 +385,20 @@
       "burstTop": 60
     },
     "demo_017": {
-      "name": "demo_017",
+      "name": "周周·客户",
+      "id": "demo_017",
+      "affinity": {
+        "mine": 89,
+        "theirs": 64,
+        "parts": {}
+      },
+      "endear": 8,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -273,12 +409,20 @@
       "burstTop": 60
     },
     "demo_018": {
-      "name": "demo_018",
+      "name": "Vivi·发小",
+      "id": "demo_018",
+      "affinity": {
+        "mine": 39,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 5,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -289,12 +433,20 @@
       "burstTop": 60
     },
     "demo_019": {
-      "name": "demo_019",
+      "name": "阿哲·同事",
+      "id": "demo_019",
+      "affinity": {
+        "mine": 71,
+        "theirs": 64,
+        "parts": {}
+      },
+      "endear": 9,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -305,12 +457,20 @@
       "burstTop": 60
     },
     "demo_020": {
-      "name": "demo_020",
+      "name": "小满·同学",
+      "id": "demo_020",
+      "affinity": {
+        "mine": 89,
+        "theirs": 43,
+        "parts": {}
+      },
+      "endear": 15,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -321,12 +481,20 @@
       "burstTop": 60
     },
     "demo_021": {
-      "name": "demo_021",
+      "name": "小林·球友",
+      "id": "demo_021",
+      "affinity": {
+        "mine": 72,
+        "theirs": 84,
+        "parts": {}
+      },
+      "endear": 16,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -337,12 +505,20 @@
       "burstTop": 60
     },
     "demo_022": {
-      "name": "demo_022",
+      "name": "阿May·前同事",
+      "id": "demo_022",
+      "affinity": {
+        "mine": 80,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 8,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -353,12 +529,20 @@
       "burstTop": 60
     },
     "demo_023": {
-      "name": "demo_023",
+      "name": "老王·客户",
+      "id": "demo_023",
+      "affinity": {
+        "mine": 93,
+        "theirs": 45,
+        "parts": {}
+      },
+      "endear": 6,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -369,12 +553,20 @@
       "burstTop": 60
     },
     "demo_024": {
-      "name": "demo_024",
+      "name": "陈陈·发小",
+      "id": "demo_024",
+      "affinity": {
+        "mine": 91,
+        "theirs": 82,
+        "parts": {}
+      },
+      "endear": 6,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,

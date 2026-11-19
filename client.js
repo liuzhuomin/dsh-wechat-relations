@@ -87,6 +87,60 @@ globalThis.__REL_PEOPLE__ = [
           "delta": 16
         }
       ]
+    },
+    "scores": {
+      "respond": 75,
+      "boundary": 66,
+      "sustain": 28
+    },
+    "importance": {
+      "score": 79,
+      "peakMonth": "2025-01",
+      "peakMsgs30": 805,
+      "peakSessions30": 161,
+      "daysSincePeak": 230,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "升温",
+      "sessions": 805,
+      "startShare": 0.627,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.6,
+      "unansweredRate": 0.08,
+      "daysSince": 230
+    },
+    "care": {
+      "score": 52,
+      "confidence": 40,
+      "trend": 0.08,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 2684,
+      "topGroups": [
+        {
+          "name": "圈子 1",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -174,6 +228,58 @@ globalThis.__REL_PEOPLE__ = [
           "from": 59,
           "to": 37,
           "delta": -22
+        }
+      ]
+    },
+    "scores": {
+      "respond": 58,
+      "boundary": 37,
+      "sustain": 86
+    },
+    "importance": {
+      "score": 82,
+      "peakMonth": "2025-02",
+      "peakMsgs30": 690,
+      "peakSessions30": 138,
+      "daysSincePeak": 176,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "稳定",
+      "sessions": 690,
+      "startShare": 0.473,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.66,
+      "unansweredRate": 0.15,
+      "daysSince": 176
+    },
+    "care": {
+      "score": 61,
+      "confidence": 47,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 2301,
+      "topGroups": [
+        {
+          "name": "圈子 2",
+          "msgs": 120
         }
       ]
     }
@@ -265,6 +371,58 @@ globalThis.__REL_PEOPLE__ = [
           "delta": -2
         }
       ]
+    },
+    "scores": {
+      "respond": 80,
+      "boundary": 64,
+      "sustain": 78
+    },
+    "importance": {
+      "score": 87,
+      "peakMonth": "2025-03",
+      "peakMsgs30": 857,
+      "peakSessions30": 171,
+      "daysSincePeak": 77,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "降温",
+      "sessions": 857,
+      "startShare": 0.544,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.72,
+      "unansweredRate": 0.22,
+      "daysSince": 77
+    },
+    "care": {
+      "score": 64,
+      "confidence": 54,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 2856,
+      "topGroups": [
+        {
+          "name": "圈子 3",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -352,6 +510,60 @@ globalThis.__REL_PEOPLE__ = [
           "from": 72,
           "to": 57,
           "delta": -15
+        }
+      ]
+    },
+    "scores": {
+      "respond": 54,
+      "boundary": 61,
+      "sustain": 57
+    },
+    "importance": {
+      "score": 85,
+      "peakMonth": "2025-04",
+      "peakMsgs30": 179,
+      "peakSessions30": 36,
+      "daysSincePeak": 113,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "沉寂",
+      "sessions": 179,
+      "startShare": 0.341,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.78,
+      "unansweredRate": 0.08,
+      "daysSince": 113
+    },
+    "care": {
+      "score": 64,
+      "confidence": 61,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 598,
+      "topGroups": [
+        {
+          "name": "圈子 4",
+          "msgs": 120
         }
       ]
     }
@@ -443,6 +655,58 @@ globalThis.__REL_PEOPLE__ = [
           "delta": 24
         }
       ]
+    },
+    "scores": {
+      "respond": 32,
+      "boundary": 80,
+      "sustain": 75
+    },
+    "importance": {
+      "score": 90,
+      "peakMonth": "2025-05",
+      "peakMsgs30": 233,
+      "peakSessions30": 47,
+      "daysSincePeak": 224,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "单向",
+      "sessions": 233,
+      "startShare": 0.562,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.84,
+      "unansweredRate": 0.15,
+      "daysSince": 224
+    },
+    "care": {
+      "score": 57,
+      "confidence": 68,
+      "trend": 0,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 777,
+      "topGroups": [
+        {
+          "name": "圈子 5",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -530,6 +794,58 @@ globalThis.__REL_PEOPLE__ = [
           "from": 56,
           "to": 40,
           "delta": -16
+        }
+      ]
+    },
+    "scores": {
+      "respond": 68,
+      "boundary": 33,
+      "sustain": 45
+    },
+    "importance": {
+      "score": 79,
+      "peakMonth": "2025-06",
+      "peakMsgs30": 793,
+      "peakSessions30": 159,
+      "daysSincePeak": 110,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "升温",
+      "sessions": 793,
+      "startShare": 0.308,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.6,
+      "unansweredRate": 0.22,
+      "daysSince": 110
+    },
+    "care": {
+      "score": 85,
+      "confidence": 75,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 2644,
+      "topGroups": [
+        {
+          "name": "圈子 6",
+          "msgs": 120
         }
       ]
     }
@@ -621,6 +937,60 @@ globalThis.__REL_PEOPLE__ = [
           "delta": 3
         }
       ]
+    },
+    "scores": {
+      "respond": 72,
+      "boundary": 43,
+      "sustain": 90
+    },
+    "importance": {
+      "score": 83,
+      "peakMonth": "2025-07",
+      "peakMsgs30": 735,
+      "peakSessions30": 147,
+      "daysSincePeak": 191,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "稳定",
+      "sessions": 735,
+      "startShare": 0.679,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.66,
+      "unansweredRate": 0.08,
+      "daysSince": 191
+    },
+    "care": {
+      "score": 50,
+      "confidence": 82,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 2449,
+      "topGroups": [
+        {
+          "name": "圈子 1",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -708,6 +1078,58 @@ globalThis.__REL_PEOPLE__ = [
           "from": 49,
           "to": 35,
           "delta": -14
+        }
+      ]
+    },
+    "scores": {
+      "respond": 29,
+      "boundary": 93,
+      "sustain": 51
+    },
+    "importance": {
+      "score": 87,
+      "peakMonth": "2025-08",
+      "peakMsgs30": 732,
+      "peakSessions30": 146,
+      "daysSincePeak": 167,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "降温",
+      "sessions": 732,
+      "startShare": 0.375,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.72,
+      "unansweredRate": 0.15,
+      "daysSince": 167
+    },
+    "care": {
+      "score": 81,
+      "confidence": 89,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 2441,
+      "topGroups": [
+        {
+          "name": "圈子 2",
+          "msgs": 120
         }
       ]
     }
@@ -799,6 +1221,58 @@ globalThis.__REL_PEOPLE__ = [
           "delta": -17
         }
       ]
+    },
+    "scores": {
+      "respond": 60,
+      "boundary": 94,
+      "sustain": 52
+    },
+    "importance": {
+      "score": 89,
+      "peakMonth": "2025-09",
+      "peakMsgs30": 561,
+      "peakSessions30": 112,
+      "daysSincePeak": 218,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "沉寂",
+      "sessions": 561,
+      "startShare": 0.496,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.78,
+      "unansweredRate": 0.22,
+      "daysSince": 218
+    },
+    "care": {
+      "score": 16,
+      "confidence": 41,
+      "trend": 0,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 1870,
+      "topGroups": [
+        {
+          "name": "圈子 3",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -886,6 +1360,60 @@ globalThis.__REL_PEOPLE__ = [
           "from": 53,
           "to": 43,
           "delta": -10
+        }
+      ]
+    },
+    "scores": {
+      "respond": 78,
+      "boundary": 30,
+      "sustain": 75
+    },
+    "importance": {
+      "score": 96,
+      "peakMonth": "2025-10",
+      "peakMsgs30": 896,
+      "peakSessions30": 179,
+      "daysSincePeak": 44,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "单向",
+      "sessions": 896,
+      "startShare": 0.542,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.84,
+      "unansweredRate": 0.08,
+      "daysSince": 44
+    },
+    "care": {
+      "score": 65,
+      "confidence": 48,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 2987,
+      "topGroups": [
+        {
+          "name": "圈子 4",
+          "msgs": 120
         }
       ]
     }
@@ -977,6 +1505,58 @@ globalThis.__REL_PEOPLE__ = [
           "delta": -34
         }
       ]
+    },
+    "scores": {
+      "respond": 65,
+      "boundary": 92,
+      "sustain": 32
+    },
+    "importance": {
+      "score": 78,
+      "peakMonth": "2025-11",
+      "peakMsgs30": 613,
+      "peakSessions30": 123,
+      "daysSincePeak": 65,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "升温",
+      "sessions": 613,
+      "startShare": 0.414,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.6,
+      "unansweredRate": 0.15,
+      "daysSince": 65
+    },
+    "care": {
+      "score": 29,
+      "confidence": 55,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 2042,
+      "topGroups": [
+        {
+          "name": "圈子 5",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1064,6 +1644,58 @@ globalThis.__REL_PEOPLE__ = [
           "from": 66,
           "to": 63,
           "delta": -3
+        }
+      ]
+    },
+    "scores": {
+      "respond": 74,
+      "boundary": 54,
+      "sustain": 46
+    },
+    "importance": {
+      "score": 80,
+      "peakMonth": "2025-12",
+      "peakMsgs30": 385,
+      "peakSessions30": 77,
+      "daysSincePeak": 221,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "稳定",
+      "sessions": 385,
+      "startShare": 0.41,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.66,
+      "unansweredRate": 0.22,
+      "daysSince": 221
+    },
+    "care": {
+      "score": 47,
+      "confidence": 62,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 1284,
+      "topGroups": [
+        {
+          "name": "圈子 6",
+          "msgs": 120
         }
       ]
     }
@@ -1155,6 +1787,60 @@ globalThis.__REL_PEOPLE__ = [
           "delta": -9
         }
       ]
+    },
+    "scores": {
+      "respond": 87,
+      "boundary": 38,
+      "sustain": 29
+    },
+    "importance": {
+      "score": 87,
+      "peakMonth": "2025-01",
+      "peakMsgs30": 889,
+      "peakSessions30": 178,
+      "daysSincePeak": 212,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "降温",
+      "sessions": 889,
+      "startShare": 0.431,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.72,
+      "unansweredRate": 0.08,
+      "daysSince": 212
+    },
+    "care": {
+      "score": 22,
+      "confidence": 69,
+      "trend": 0.08,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 2963,
+      "topGroups": [
+        {
+          "name": "圈子 1",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1242,6 +1928,58 @@ globalThis.__REL_PEOPLE__ = [
           "from": 49,
           "to": 46,
           "delta": -3
+        }
+      ]
+    },
+    "scores": {
+      "respond": 88,
+      "boundary": 26,
+      "sustain": 34
+    },
+    "importance": {
+      "score": 82,
+      "peakMonth": "2025-02",
+      "peakMsgs30": 99,
+      "peakSessions30": 20,
+      "daysSincePeak": 218,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "沉寂",
+      "sessions": 99,
+      "startShare": 0.377,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.78,
+      "unansweredRate": 0.15,
+      "daysSince": 218
+    },
+    "care": {
+      "score": 69,
+      "confidence": 76,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 330,
+      "topGroups": [
+        {
+          "name": "圈子 2",
+          "msgs": 120
         }
       ]
     }
@@ -1333,6 +2071,58 @@ globalThis.__REL_PEOPLE__ = [
           "delta": -30
         }
       ]
+    },
+    "scores": {
+      "respond": 57,
+      "boundary": 71,
+      "sustain": 44
+    },
+    "importance": {
+      "score": 93,
+      "peakMonth": "2025-03",
+      "peakMsgs30": 491,
+      "peakSessions30": 98,
+      "daysSincePeak": 179,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "单向",
+      "sessions": 491,
+      "startShare": 0.548,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.84,
+      "unansweredRate": 0.22,
+      "daysSince": 179
+    },
+    "care": {
+      "score": 67,
+      "confidence": 83,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 1635,
+      "topGroups": [
+        {
+          "name": "圈子 3",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1420,6 +2210,60 @@ globalThis.__REL_PEOPLE__ = [
           "from": 43,
           "to": 41,
           "delta": -2
+        }
+      ]
+    },
+    "scores": {
+      "respond": 49,
+      "boundary": 85,
+      "sustain": 40
+    },
+    "importance": {
+      "score": 66,
+      "peakMonth": "2025-04",
+      "peakMsgs30": 38,
+      "peakSessions30": 8,
+      "daysSincePeak": 35,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "升温",
+      "sessions": 38,
+      "startShare": 0.444,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.6,
+      "unansweredRate": 0.08,
+      "daysSince": 35
+    },
+    "care": {
+      "score": 85,
+      "confidence": 90,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 127,
+      "topGroups": [
+        {
+          "name": "圈子 4",
+          "msgs": 120
         }
       ]
     }
@@ -1511,6 +2355,58 @@ globalThis.__REL_PEOPLE__ = [
           "delta": 1
         }
       ]
+    },
+    "scores": {
+      "respond": 45,
+      "boundary": 52,
+      "sustain": 76
+    },
+    "importance": {
+      "score": 79,
+      "peakMonth": "2025-05",
+      "peakMsgs30": 317,
+      "peakSessions30": 63,
+      "daysSincePeak": 206,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "稳定",
+      "sessions": 317,
+      "startShare": 0.366,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.66,
+      "unansweredRate": 0.15,
+      "daysSince": 206
+    },
+    "care": {
+      "score": 59,
+      "confidence": 42,
+      "trend": 0,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 1056,
+      "topGroups": [
+        {
+          "name": "圈子 5",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1598,6 +2494,58 @@ globalThis.__REL_PEOPLE__ = [
           "from": 46,
           "to": 49,
           "delta": 3
+        }
+      ]
+    },
+    "scores": {
+      "respond": 28,
+      "boundary": 92,
+      "sustain": 64
+    },
+    "importance": {
+      "score": 81,
+      "peakMonth": "2025-06",
+      "peakMsgs30": 202,
+      "peakSessions30": 40,
+      "daysSincePeak": 152,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "降温",
+      "sessions": 202,
+      "startShare": 0.612,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.72,
+      "unansweredRate": 0.22,
+      "daysSince": 152
+    },
+    "care": {
+      "score": 68,
+      "confidence": 49,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 673,
+      "topGroups": [
+        {
+          "name": "圈子 6",
+          "msgs": 120
         }
       ]
     }
@@ -1689,6 +2637,60 @@ globalThis.__REL_PEOPLE__ = [
           "delta": 23
         }
       ]
+    },
+    "scores": {
+      "respond": 50,
+      "boundary": 50,
+      "sustain": 56
+    },
+    "importance": {
+      "score": 88,
+      "peakMonth": "2025-07",
+      "peakMsgs30": 368,
+      "peakSessions30": 74,
+      "daysSincePeak": 53,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "沉寂",
+      "sessions": 368,
+      "startShare": 0.683,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.78,
+      "unansweredRate": 0.08,
+      "daysSince": 53
+    },
+    "care": {
+      "score": 72,
+      "confidence": 56,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 1228,
+      "topGroups": [
+        {
+          "name": "圈子 1",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1776,6 +2778,58 @@ globalThis.__REL_PEOPLE__ = [
           "from": 60,
           "to": 69,
           "delta": 9
+        }
+      ]
+    },
+    "scores": {
+      "respond": 94,
+      "boundary": 47,
+      "sustain": 34
+    },
+    "importance": {
+      "score": 94,
+      "peakMonth": "2025-08",
+      "peakMsgs30": 591,
+      "peakSessions30": 118,
+      "daysSincePeak": 89,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "单向",
+      "sessions": 591,
+      "startShare": 0.479,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.84,
+      "unansweredRate": 0.15,
+      "daysSince": 89
+    },
+    "care": {
+      "score": 71,
+      "confidence": 63,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 1970,
+      "topGroups": [
+        {
+          "name": "圈子 2",
+          "msgs": 120
         }
       ]
     }
@@ -1867,6 +2921,58 @@ globalThis.__REL_PEOPLE__ = [
           "delta": -41
         }
       ]
+    },
+    "scores": {
+      "respond": 72,
+      "boundary": 65,
+      "sustain": 53
+    },
+    "importance": {
+      "score": 78,
+      "peakMonth": "2025-09",
+      "peakMsgs30": 645,
+      "peakSessions30": 129,
+      "daysSincePeak": 200,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "升温",
+      "sessions": 645,
+      "startShare": 0.3,
+      "doubleMe": 0.2,
+      "doubleThem": 0.2,
+      "lsm": 0.6,
+      "unansweredRate": 0.22,
+      "daysSince": 200
+    },
+    "care": {
+      "score": 64,
+      "confidence": 70,
+      "trend": 0,
+      "due": true,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 0,
+      "groupMsgs": 2149,
+      "topGroups": [
+        {
+          "name": "圈子 3",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -1954,6 +3060,60 @@ globalThis.__REL_PEOPLE__ = [
           "from": 43,
           "to": 52,
           "delta": 9
+        }
+      ]
+    },
+    "scores": {
+      "respond": 38,
+      "boundary": 89,
+      "sustain": 93
+    },
+    "importance": {
+      "score": 79,
+      "peakMonth": "2025-10",
+      "peakMsgs30": 305,
+      "peakSessions30": 61,
+      "daysSincePeak": 86,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "稳定",
+      "sessions": 305,
+      "startShare": 0.446,
+      "doubleMe": 0.32,
+      "doubleThem": 0.2,
+      "lsm": 0.66,
+      "unansweredRate": 0.08,
+      "daysSince": 86
+    },
+    "care": {
+      "score": 86,
+      "confidence": 77,
+      "trend": 0.08,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [
+        "偶尔回得慢"
+      ],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 1,
+      "groupMsgs": 1016,
+      "topGroups": [
+        {
+          "name": "圈子 4",
+          "msgs": 120
         }
       ]
     }
@@ -2045,6 +3205,58 @@ globalThis.__REL_PEOPLE__ = [
           "delta": -14
         }
       ]
+    },
+    "scores": {
+      "respond": 42,
+      "boundary": 29,
+      "sustain": 67
+    },
+    "importance": {
+      "score": 82,
+      "peakMonth": "2025-11",
+      "peakMsgs30": 246,
+      "peakSessions30": 49,
+      "daysSincePeak": 167,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "降温",
+      "sessions": 246,
+      "startShare": 0.418,
+      "doubleMe": 0.44,
+      "doubleThem": 0.2,
+      "lsm": 0.72,
+      "unansweredRate": 0.15,
+      "daysSince": 167
+    },
+    "care": {
+      "score": 70,
+      "confidence": 84,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 2,
+      "groupMsgs": 821,
+      "topGroups": [
+        {
+          "name": "圈子 5",
+          "msgs": 120
+        }
+      ]
     }
   },
   {
@@ -2132,6 +3344,58 @@ globalThis.__REL_PEOPLE__ = [
           "from": 76,
           "to": 47,
           "delta": -29
+        }
+      ]
+    },
+    "scores": {
+      "respond": 69,
+      "boundary": 78,
+      "sustain": 29
+    },
+    "importance": {
+      "score": 86,
+      "peakMonth": "2025-12",
+      "peakMsgs30": 244,
+      "peakSessions30": 49,
+      "daysSincePeak": 143,
+      "weights": {
+        "peak": 0.6,
+        "sessions": 0.25,
+        "volume": 0.15
+      }
+    },
+    "dynamics": {
+      "stage": "沉寂",
+      "sessions": 244,
+      "startShare": 0.514,
+      "doubleMe": 0.56,
+      "doubleThem": 0.2,
+      "lsm": 0.78,
+      "unansweredRate": 0.22,
+      "daysSince": 143
+    },
+    "care": {
+      "score": 89,
+      "confidence": 91,
+      "trend": 0,
+      "due": false,
+      "pos": [
+        "主动开话题",
+        "聊生活多过聊工作"
+      ],
+      "neg": [],
+      "signals": {
+        "deep": 0.5
+      },
+      "manual": false
+    },
+    "social": {
+      "groups": 3,
+      "groupMsgs": 813,
+      "topGroups": [
+        {
+          "name": "圈子 6",
+          "msgs": 120
         }
       ]
     }
@@ -2318,12 +3582,20 @@ globalThis.__REL_ME__ = {
 globalThis.__REL_INSIGHTS__ = {
   "people": {
     "demo_001": {
-      "name": "demo_001",
+      "name": "小林·同事",
+      "id": "demo_001",
+      "affinity": {
+        "mine": 80,
+        "theirs": 63,
+        "parts": {}
+      },
+      "endear": 20,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2334,12 +3606,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_002": {
-      "name": "demo_002",
+      "name": "阿May·同学",
+      "id": "demo_002",
+      "affinity": {
+        "mine": 29,
+        "theirs": 90,
+        "parts": {}
+      },
+      "endear": 17,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2350,12 +3630,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_003": {
-      "name": "demo_003",
+      "name": "老王·球友",
+      "id": "demo_003",
+      "affinity": {
+        "mine": 61,
+        "theirs": 63,
+        "parts": {}
+      },
+      "endear": 21,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2366,12 +3654,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_004": {
-      "name": "demo_004",
+      "name": "陈陈·前同事",
+      "id": "demo_004",
+      "affinity": {
+        "mine": 79,
+        "theirs": 42,
+        "parts": {}
+      },
+      "endear": 4,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2382,12 +3678,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_005": {
-      "name": "demo_005",
+      "name": "Summer·客户",
+      "id": "demo_005",
+      "affinity": {
+        "mine": 62,
+        "theirs": 83,
+        "parts": {}
+      },
+      "endear": 6,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2398,12 +3702,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_006": {
-      "name": "demo_006",
+      "name": "大鹏·发小",
+      "id": "demo_006",
+      "affinity": {
+        "mine": 70,
+        "theirs": 90,
+        "parts": {}
+      },
+      "endear": 20,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2414,12 +3726,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_007": {
-      "name": "demo_007",
+      "name": "周周·同事",
+      "id": "demo_007",
+      "affinity": {
+        "mine": 83,
+        "theirs": 44,
+        "parts": {}
+      },
+      "endear": 18,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2430,12 +3750,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_008": {
-      "name": "demo_008",
+      "name": "Vivi·同学",
+      "id": "demo_008",
+      "affinity": {
+        "mine": 81,
+        "theirs": 81,
+        "parts": {}
+      },
+      "endear": 18,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2446,12 +3774,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_009": {
-      "name": "demo_009",
+      "name": "阿哲·球友",
+      "id": "demo_009",
+      "affinity": {
+        "mine": 45,
+        "theirs": 25,
+        "parts": {}
+      },
+      "endear": 14,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2462,12 +3798,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_010": {
-      "name": "demo_010",
+      "name": "小满·前同事",
+      "id": "demo_010",
+      "affinity": {
+        "mine": 34,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 22,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2478,12 +3822,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_011": {
-      "name": "demo_011",
+      "name": "小林·客户",
+      "id": "demo_011",
+      "affinity": {
+        "mine": 27,
+        "theirs": 25,
+        "parts": {}
+      },
+      "endear": 15,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2494,12 +3846,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_012": {
-      "name": "demo_012",
+      "name": "阿May·发小",
+      "id": "demo_012",
+      "affinity": {
+        "mine": 84,
+        "theirs": 42,
+        "parts": {}
+      },
+      "endear": 10,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2510,12 +3870,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_013": {
-      "name": "demo_013",
+      "name": "老王·同事",
+      "id": "demo_013",
+      "affinity": {
+        "mine": 28,
+        "theirs": 45,
+        "parts": {}
+      },
+      "endear": 22,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2526,12 +3894,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_014": {
-      "name": "demo_014",
+      "name": "陈陈·同学",
+      "id": "demo_014",
+      "affinity": {
+        "mine": 75,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 2,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2542,12 +3918,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_015": {
-      "name": "demo_015",
+      "name": "Summer·球友",
+      "id": "demo_015",
+      "affinity": {
+        "mine": 49,
+        "theirs": 84,
+        "parts": {}
+      },
+      "endear": 12,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2558,12 +3942,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_016": {
-      "name": "demo_016",
+      "name": "大鹏·前同事",
+      "id": "demo_016",
+      "affinity": {
+        "mine": 86,
+        "theirs": 81,
+        "parts": {}
+      },
+      "endear": 1,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2574,12 +3966,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_017": {
-      "name": "demo_017",
+      "name": "周周·客户",
+      "id": "demo_017",
+      "affinity": {
+        "mine": 89,
+        "theirs": 64,
+        "parts": {}
+      },
+      "endear": 8,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2590,12 +3990,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_018": {
-      "name": "demo_018",
+      "name": "Vivi·发小",
+      "id": "demo_018",
+      "affinity": {
+        "mine": 39,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 5,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2606,12 +4014,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_019": {
-      "name": "demo_019",
+      "name": "阿哲·同事",
+      "id": "demo_019",
+      "affinity": {
+        "mine": 71,
+        "theirs": 64,
+        "parts": {}
+      },
+      "endear": 9,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2622,12 +4038,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_020": {
-      "name": "demo_020",
+      "name": "小满·同学",
+      "id": "demo_020",
+      "affinity": {
+        "mine": 89,
+        "theirs": 43,
+        "parts": {}
+      },
+      "endear": 15,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2638,12 +4062,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_021": {
-      "name": "demo_021",
+      "name": "小林·球友",
+      "id": "demo_021",
+      "affinity": {
+        "mine": 72,
+        "theirs": 84,
+        "parts": {}
+      },
+      "endear": 16,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2654,12 +4086,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_022": {
-      "name": "demo_022",
+      "name": "阿May·前同事",
+      "id": "demo_022",
+      "affinity": {
+        "mine": 80,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 8,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2670,12 +4110,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_023": {
-      "name": "demo_023",
+      "name": "老王·客户",
+      "id": "demo_023",
+      "affinity": {
+        "mine": 93,
+        "theirs": 45,
+        "parts": {}
+      },
+      "endear": 6,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2686,12 +4134,20 @@ globalThis.__REL_INSIGHTS__ = {
       "burstTop": 60
     },
     "demo_024": {
-      "name": "demo_024",
+      "name": "陈陈·发小",
+      "id": "demo_024",
+      "affinity": {
+        "mine": 91,
+        "theirs": 82,
+        "parts": {}
+      },
+      "endear": 6,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2742,12 +4198,20 @@ globalThis.__REL_GRAPH__ = {
 globalThis.__REL_EXTRA__ = {
   "people": {
     "demo_001": {
-      "name": "demo_001",
+      "name": "小林·同事",
+      "id": "demo_001",
+      "affinity": {
+        "mine": 80,
+        "theirs": 63,
+        "parts": {}
+      },
+      "endear": 20,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2758,12 +4222,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_002": {
-      "name": "demo_002",
+      "name": "阿May·同学",
+      "id": "demo_002",
+      "affinity": {
+        "mine": 29,
+        "theirs": 90,
+        "parts": {}
+      },
+      "endear": 17,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2774,12 +4246,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_003": {
-      "name": "demo_003",
+      "name": "老王·球友",
+      "id": "demo_003",
+      "affinity": {
+        "mine": 61,
+        "theirs": 63,
+        "parts": {}
+      },
+      "endear": 21,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2790,12 +4270,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_004": {
-      "name": "demo_004",
+      "name": "陈陈·前同事",
+      "id": "demo_004",
+      "affinity": {
+        "mine": 79,
+        "theirs": 42,
+        "parts": {}
+      },
+      "endear": 4,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2806,12 +4294,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_005": {
-      "name": "demo_005",
+      "name": "Summer·客户",
+      "id": "demo_005",
+      "affinity": {
+        "mine": 62,
+        "theirs": 83,
+        "parts": {}
+      },
+      "endear": 6,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2822,12 +4318,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_006": {
-      "name": "demo_006",
+      "name": "大鹏·发小",
+      "id": "demo_006",
+      "affinity": {
+        "mine": 70,
+        "theirs": 90,
+        "parts": {}
+      },
+      "endear": 20,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2838,12 +4342,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_007": {
-      "name": "demo_007",
+      "name": "周周·同事",
+      "id": "demo_007",
+      "affinity": {
+        "mine": 83,
+        "theirs": 44,
+        "parts": {}
+      },
+      "endear": 18,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2854,12 +4366,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_008": {
-      "name": "demo_008",
+      "name": "Vivi·同学",
+      "id": "demo_008",
+      "affinity": {
+        "mine": 81,
+        "theirs": 81,
+        "parts": {}
+      },
+      "endear": 18,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2870,12 +4390,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_009": {
-      "name": "demo_009",
+      "name": "阿哲·球友",
+      "id": "demo_009",
+      "affinity": {
+        "mine": 45,
+        "theirs": 25,
+        "parts": {}
+      },
+      "endear": 14,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2886,12 +4414,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_010": {
-      "name": "demo_010",
+      "name": "小满·前同事",
+      "id": "demo_010",
+      "affinity": {
+        "mine": 34,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 22,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2902,12 +4438,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_011": {
-      "name": "demo_011",
+      "name": "小林·客户",
+      "id": "demo_011",
+      "affinity": {
+        "mine": 27,
+        "theirs": 25,
+        "parts": {}
+      },
+      "endear": 15,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2918,12 +4462,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_012": {
-      "name": "demo_012",
+      "name": "阿May·发小",
+      "id": "demo_012",
+      "affinity": {
+        "mine": 84,
+        "theirs": 42,
+        "parts": {}
+      },
+      "endear": 10,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2934,12 +4486,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_013": {
-      "name": "demo_013",
+      "name": "老王·同事",
+      "id": "demo_013",
+      "affinity": {
+        "mine": 28,
+        "theirs": 45,
+        "parts": {}
+      },
+      "endear": 22,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2950,12 +4510,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_014": {
-      "name": "demo_014",
+      "name": "陈陈·同学",
+      "id": "demo_014",
+      "affinity": {
+        "mine": 75,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 2,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2966,12 +4534,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_015": {
-      "name": "demo_015",
+      "name": "Summer·球友",
+      "id": "demo_015",
+      "affinity": {
+        "mine": 49,
+        "theirs": 84,
+        "parts": {}
+      },
+      "endear": 12,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2982,12 +4558,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_016": {
-      "name": "demo_016",
+      "name": "大鹏·前同事",
+      "id": "demo_016",
+      "affinity": {
+        "mine": 86,
+        "theirs": 81,
+        "parts": {}
+      },
+      "endear": 1,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -2998,12 +4582,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_017": {
-      "name": "demo_017",
+      "name": "周周·客户",
+      "id": "demo_017",
+      "affinity": {
+        "mine": 89,
+        "theirs": 64,
+        "parts": {}
+      },
+      "endear": 8,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -3014,12 +4606,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_018": {
-      "name": "demo_018",
+      "name": "Vivi·发小",
+      "id": "demo_018",
+      "affinity": {
+        "mine": 39,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 5,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -3030,12 +4630,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_019": {
-      "name": "demo_019",
+      "name": "阿哲·同事",
+      "id": "demo_019",
+      "affinity": {
+        "mine": 71,
+        "theirs": 64,
+        "parts": {}
+      },
+      "endear": 9,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -3046,12 +4654,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_020": {
-      "name": "demo_020",
+      "name": "小满·同学",
+      "id": "demo_020",
+      "affinity": {
+        "mine": 89,
+        "theirs": 43,
+        "parts": {}
+      },
+      "endear": 15,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -3062,12 +4678,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_021": {
-      "name": "demo_021",
+      "name": "小林·球友",
+      "id": "demo_021",
+      "affinity": {
+        "mine": 72,
+        "theirs": 84,
+        "parts": {}
+      },
+      "endear": 16,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -3078,12 +4702,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_022": {
-      "name": "demo_022",
+      "name": "阿May·前同事",
+      "id": "demo_022",
+      "affinity": {
+        "mine": 80,
+        "theirs": 91,
+        "parts": {}
+      },
+      "endear": 8,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -3094,12 +4726,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_023": {
-      "name": "demo_023",
+      "name": "老王·客户",
+      "id": "demo_023",
+      "affinity": {
+        "mine": 93,
+        "theirs": 45,
+        "parts": {}
+      },
+      "endear": 6,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -3110,12 +4750,20 @@ globalThis.__REL_EXTRA__ = {
       "burstTop": 60
     },
     "demo_024": {
-      "name": "demo_024",
+      "name": "陈陈·发小",
+      "id": "demo_024",
+      "affinity": {
+        "mine": 91,
+        "theirs": 82,
+        "parts": {}
+      },
+      "endear": 6,
       "topics": {
-        "work": 0.4,
+        "work": 0.3,
         "life": 0.3,
         "food": 0.2,
-        "love": 0.1
+        "love": 0.15,
+        "family": 0.05
       },
       "empathyDelay": 3600,
       "empathyWarmth": 0.6,
@@ -3607,8 +5255,8 @@ window.__ModuleLoader__.load({
         h('dl', { className: 'dsh-rel-kv' },
           h('div', null, h('dt', null, '消息'), h('dd', null, String(p.volume))),
           h('div', null, h('dt', null, '均衡'), h('dd', null, `${Math.round(p.reciprocity * 100)}%`)),
-          h('div', null, h('dt', null, '未回复率'), h('dd', null, `${Math.round(((iv && iv.noReplyRate) || 0) * 100)}%`)),
-          h('div', null, h('dt', null, '黏性'), h('dd', null, `${Math.round(((iv && iv.stick) || 0) * 100)}%`))),
+          h('div', null, h('dt', null, '未回复率'), h('dd', null, `${Math.round((iv.noReplyRate || 0) * 100)}%`)),
+          h('div', null, h('dt', null, '黏性'), h('dd', null, `${Math.round((iv.stick || 0) * 100)}%`))),
         r ? h('dl', { className: 'dsh-rel-kv' },
           h('div', null, h('dt', null, '我 P90'), h('dd', null, fmtGap(r.p90))),
           h('div', null, h('dt', null, '冷场'), h('dd', null, `${r.cold} 次`))) : null,
@@ -3712,6 +5360,19 @@ window.__ModuleLoader__.load({
                   }, row, body)
                   : h('div', { key: it.label, className: 'dsh-rel-fact' }, row, body)
               })),
+            p.dynamics ? h('div', { className: 'dsh-rel-muted', style: { marginTop: 4 } },
+              `动力学：${p.dynamics.stage} · 会话 ${p.dynamics.sessions} 段 · 我发起 ${Math.round((p.dynamics.startShare || 0) * 100)}% · 我连发 ${Math.round((p.dynamics.doubleMe || 0) * 100)}% · 风格趋同 ${p.dynamics.lsm != null ? Math.round(p.dynamics.lsm * 100) + '%' : '—'} · 已读未回 ${Math.round((p.dynamics.unansweredRate || 0) * 100)}%`) : null,
+            p.importance ? h('div', { className: 'dsh-rel-muted' },
+              `重要度 ${p.importance.score}（按历史峰值）· 峰值 ${p.importance.peakMonth} · ${p.importance.peakMsgs30} 条 / 30 天 · 峰值后 ${p.importance.daysSincePeak} 天`) : null,
+            p.care ? h('div', { className: 'dsh-rel-muted' },
+              `我真正在意 ${props.careOverride != null ? props.careOverride : p.care.score}（置信度 ${p.care.confidence == null ? '—' : p.care.confidence}）${p.care.trend > 0.03 ? ' · 投入 ↑' : p.care.trend < -0.03 ? ' · 投入 ↓' : ''}${p.care.due ? ' · 该联系了' : ''}${p.social ? ` · 共同群 ${p.social.groups}` : ''}${p.care.manual ? ' · 已人工校准' : ''}`) : null,
+            p.care ? h('div', { className: 'dsh-rel-tags', style: { marginTop: 4, gap: 6 } },
+              [['care', '很在意'], ['normal', '一般'], ['dontcare', '不在意']].map(([v, label]) =>
+                h('button', {
+                  key: v, type: 'button', className: 'dsh-rel-fchip',
+                  style: { cursor: 'pointer' },
+                  onClick: () => props.onMarkCare && props.onMarkCare(p, v),
+                }, label))) : null,
             evKind ? h('div', { className: 'dsh-rel-events' },
               h('div', { className: 'dsh-rel-sub' },
                 `${evKind === 'start' ? '真发起' : '隔空承接'} · ${visible.length} 条（点同一行收起）`),
@@ -4060,8 +5721,9 @@ window.__ModuleLoader__.load({
     function View() {
       const [mode, setMode] = React.useState('network')
       const [query, setQuery] = React.useState('')
-      const [cat, setCat] = React.useState(null)
-      const [sortBy, setSortBy] = React.useState('mine-desc')
+      const [sortBy, setSortBy] = React.useState('importance-desc')
+      const [filters, setFilters] = React.useState({ role: null, tier: null, stage: null, stance: null })
+      const all = data('__REL_PEOPLE__', [])
       const affMap = React.useMemo(() => {
         const ins = data('__REL_INSIGHTS__', null)
         const m = {}
@@ -4077,35 +5739,152 @@ window.__ModuleLoader__.load({
         const v = affMap[p.id]
         return v && v[side] != null ? v[side] : -1
       }
+      const impOf = (p) => (p.importance && p.importance.score != null ? p.importance.score : null)
+      const careOf = (p) => (careEdits[p.id] != null ? careEdits[p.id] : (p.care && p.care.score != null ? p.care.score : null))
+      const markCare = async (p, value) => {
+        try {
+          const r = await fetch('/dsh-relationship/care', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify({ name: p.name, value }),
+          })
+          const j = await r.json()
+          if (j && j.ok) setCareEdits((m) => ({ ...m, [p.id]: j.score }))
+        } catch (e) { /* 静默失败，不打断阅读 */ }
+      }
+      const stageOf = (p) => (p.dynamics && p.dynamics.stage) || '未知'
+      const stanceOf = (p) => {
+        const v = affMap[p.id]
+        if (!v) return '未评估'
+        const d = v.mine - v.theirs
+        if (v.mine >= 60 && v.theirs >= 60) return '双向'
+        if (d >= 15) return '我主动'
+        if (d <= -15) return '对方主动'
+        if (v.mine < 35 && v.theirs < 35) return '冷淡'
+        return '平衡'
+      }
+      const insMap = React.useMemo(() => {
+        const ins = data('__REL_INSIGHTS__', null)
+        return (ins && ins.people) || {}
+      }, [])
+      const intentRawOf = (p) => {
+        const d = p.dynamics || {}
+        const iv = insMap[p.id] || {}
+        const e = p.emotion || {}
+        const a = affMap[p.id] || {}
+        if (a.mine == null) return 0
+        const rit = (d.rituals && d.rituals['晚安']) || {}
+        let s = 0
+        s += Math.min(1, ((rit.me || 0) + (rit.them || 0)) / 24) * 24
+        s += Math.min(1, (iv.endear || 0) / 16) * 20
+        s += (d.lsm || 0) * 16
+        s += Math.min(1, d.doubleMe || 0) * 10
+        s += Math.min(1, d.doubleThem || 0) * 6
+        s += (((e.me && e.me.valence) || 0) + 1) / 2 * 8
+        s += (((e.them && e.them.valence) || 0) + 1) / 2 * 6
+        if (d.stage === '升温') s += 6
+        if (d.stage === '沉寂') s *= 0.5
+        if (a.mine >= 50 && a.theirs >= 50) s += 4
+        if (['family', 'brother', 'ex'].includes(p.category)) s *= 0.25
+        return Math.round(Math.min(100, s))
+      }
+      // 意向分在全体关系里取百分位：原始分只用于排序，展示的是「比多少人更明显」
+      const intentPct = React.useMemo(() => {
+        const raw = {}
+        for (const p of all) raw[p.id] = intentRawOf(p)
+        const vals = Object.values(raw).sort((a, b) => a - b)
+        const n = vals.length || 1
+        const out = {}
+        for (const [id, v] of Object.entries(raw)) {
+          let lo = 0
+          let hi = n
+          while (lo < hi) {
+            const mid = (lo + hi) >> 1
+            if (vals[mid] < v) lo = mid + 1
+            else hi = mid
+          }
+          const left = lo
+          lo = 0
+          hi = n
+          while (lo < hi) {
+            const mid = (lo + hi) >> 1
+            if (vals[mid] <= v) lo = mid + 1
+            else hi = mid
+          }
+          out[id] = Math.round((100 * ((left + lo) / 2)) / n)
+        }
+        return out
+      }, [all])
+      const intentOf = (p) => intentPct[p.id] ?? 0
+      const closeOf = (p) => {
+        const d = p.dynamics || {}
+        const a = affMap[p.id] || {}
+        const imp = (p.importance && p.importance.score) || 0
+        if (a.mine == null) return false
+        return (d.stage === '升温' || d.stage === '稳定') && imp >= 75 && a.mine + a.theirs >= 110
+      }
+      const [quick, setQuick] = React.useState(null)
+      const [showFilters, setShowFilters] = React.useState(false)
+      const [careEdits, setCareEdits] = React.useState({})
       const [selectedId, setSelectedId] = React.useState(null)
       const [focus, setFocus] = React.useState(null)
-      const all = data('__REL_PEOPLE__', [])
+      // 关系层级按重要度排名切：核心 5 / 亲密 15 / 活跃 50 / 其余弱连接（Dunbar 分层）
+      const tierMap = React.useMemo(() => {
+        const ranked = all.filter((p) => impOf(p) != null).slice().sort((a, b) => impOf(b) - impOf(a))
+        const m = {}
+        ranked.forEach((p, i) => {
+          m[p.id] = i < 5 ? '核心圈' : i < 15 ? '亲密圈' : i < 50 ? '活跃圈' : '弱连接'
+        })
+        return m
+      }, [all])
+      const tierOf = (p) => tierMap[p.id] || '弱连接'
       const people = React.useMemo(() => {
         const q = query.trim()
         const list = all.filter((p) => {
-          if (cat && p.category !== cat) return false
           if (q && !p.name.includes(q)) return false
+          if (quick === 'close' && !closeOf(p)) return false
+          if (quick === 'intent' && intentOf(p) < 90) return false
+          if (quick === 'care' && !(careOf(p) != null && careOf(p) >= 85)) return false
+          if (quick === 'duty' && !(careOf(p) != null && careOf(p) <= 20)) return false
+          if (quick === 'due' && !(p.care && p.care.due)) return false
+          if (filters.role && p.category !== filters.role) return false
+          if (filters.tier && tierOf(p) !== filters.tier) return false
+          if (filters.stage && stageOf(p) !== filters.stage) return false
+          if (filters.stance && stanceOf(p) !== filters.stance) return false
           return true
         })
         const s = list.slice()
-        const val = (p) => {
-          const v = affMap[p.id]
-          return v && v[side] != null ? v[side] : -1
-        }
-        if (sortBy.indexOf('-desc') > 0) s.sort((a, b) => val(b) - val(a))
-        else if (sortBy.indexOf('-asc') > 0) s.sort((a, b) => val(a) - val(b))
+        const imp = (p) => impOf(p) ?? -1
+        const lastDays = (p) => (p.dynamics && p.dynamics.daysSince) ?? 9e9
+        if (sortBy === 'importance-desc') s.sort((a, b) => imp(b) - imp(a))
+        else if (sortBy.indexOf('-desc') > 0) s.sort((a, b) => affOf(b) - affOf(a))
+        else if (sortBy.indexOf('-asc') > 0) s.sort((a, b) => affOf(a) - affOf(b))
         else if (sortBy === 'volume-desc') s.sort((a, b) => b.volume - a.volume)
         else if (sortBy === 'volume-asc') s.sort((a, b) => a.volume - b.volume)
-        else if (sortBy === 'slope-desc') s.sort((a, b) => b.slope - a.slope)
-        else s.sort((a, b) => a.slope - b.slope)
+        else if (sortBy === 'last-asc') s.sort((a, b) => lastDays(a) - lastDays(b))
+        else if (sortBy === 'peak-desc') s.sort((a, b) => ((b.importance && b.importance.peakMsgs30) || 0) - ((a.importance && a.importance.peakMsgs30) || 0))
+        else s.sort((a, b) => b.slope - a.slope)
         return s
-      }, [all, query, cat, sortBy])
+      }, [all, query, filters, sortBy, quick])
       const selected = all.find((p) => p.id === selectedId) || null
       const counts = React.useMemo(() => {
         const m = {}
         for (const p of all) m[p.category] = (m[p.category] || 0) + 1
         return m
       }, [all])
+      const filterGroups = [
+        { key: 'role', label: '角色', opts: Object.keys(CAT_LABEL).filter((k) => counts[k]) },
+        { key: 'tier', label: '层级', opts: ['核心圈', '亲密圈', '活跃圈', '弱连接'] },
+        { key: 'stage', label: '阶段', opts: ['升温', '稳定', '降温', '沉寂', '单向'] },
+        { key: 'stance', label: '态势', opts: ['双向', '我主动', '对方主动', '平衡', '冷淡'] },
+      ]
+      const optLabel = (g, k) => (g.key === 'role' ? CAT_LABEL[k] : k)
+      const optCount = (g, k) => all.filter((p) => {
+        if (g.key === 'role') return p.category === k
+        if (g.key === 'tier') return tierOf(p) === k
+        if (g.key === 'stage') return stageOf(p) === k
+        return stanceOf(p) === k
+      }).length
 
       return h('div', { className: 'dsh-rel' },
         h('header', { className: 'dsh-rel-head' },
@@ -4128,48 +5907,95 @@ window.__ModuleLoader__.load({
               className: 'dsh-rel-input', value: sortBy,
               onChange: (e) => setSortBy(e.currentTarget.value),
             },
+            h('option', { value: 'importance-desc' }, '重要度 ↓'),
             h('option', { value: 'mine-desc' }, '我在意 TA ↓'),
-            h('option', { value: 'mine-asc' }, '我在意 TA ↑'),
             h('option', { value: 'theirs-desc' }, 'TA 在意我 ↓'),
-            h('option', { value: 'theirs-asc' }, 'TA 在意我 ↑'),
+            h('option', { value: 'mine-asc' }, '我在意 TA ↑'),
             h('option', { value: 'volume-desc' }, '消息量 ↓'),
-            h('option', { value: 'volume-asc' }, '消息量 ↑'),
-            h('option', { value: 'slope-desc' }, '走势 ↓'),
-            h('option', { value: 'slope-asc' }, '走势 ↑')),
-            h('div', { className: 'dsh-rel-cats' },
-              h('button', {
-                type: 'button', className: 'dsh-rel-cat',
-                'data-active': cat === null ? 'true' : 'false',
-                onClick: () => setCat(null),
-              }, h('span', null, '全部'), h('b', null, all.length)),
-              Object.keys(CAT_LABEL).filter((k) => counts[k]).map((k) => h('button', {
-                key: k, type: 'button', className: 'dsh-rel-cat',
-                'data-active': cat === k ? 'true' : 'false',
-                onClick: () => setCat(cat === k ? null : k),
-              },
-              h('i', { style: { background: CAT_COLOR[k] } }),
-              h('span', null, CAT_LABEL[k]), h('b', null, counts[k])))),
+            h('option', { value: 'last-asc' }, '最近互动'),
+            h('option', { value: 'peak-desc' }, '峰值消息量 ↓'),
+            h('option', { value: 'slope-desc' }, '走势 ↓')),
+            h('div', { className: 'dsh-rel-filters' },
+              h('div', { className: 'dsh-rel-quick' },
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === null ? 'true' : 'false',
+                  onClick: () => setQuick(null),
+                }, '快捷：全部'),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === 'close' ? 'true' : 'false',
+                  onClick: () => setQuick(quick === 'close' ? null : 'close'),
+                }, `亲密关系 ${all.filter(closeOf).length}`),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === 'intent' ? 'true' : 'false',
+                  onClick: () => setQuick(quick === 'intent' ? null : 'intent'),
+                }, `有发展意向 ${all.filter((p) => intentOf(p) >= 90).length}`),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === 'care' ? 'true' : 'false',
+                  onClick: () => setQuick(quick === 'care' ? null : 'care'),
+                }, `我真正在意 ${all.filter((p) => careOf(p) != null && careOf(p) >= 85).length}`),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === 'duty' ? 'true' : 'false',
+                  onClick: () => setQuick(quick === 'duty' ? null : 'duty'),
+                }, `只是应酬 ${all.filter((p) => careOf(p) != null && careOf(p) <= 20).length}`),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  'data-on': quick === 'due' ? 'true' : 'false',
+                  onClick: () => setQuick(quick === 'due' ? null : 'due'),
+                }, `该联系了 ${all.filter((p) => p.care && p.care.due).length}`),
+                h('button', {
+                  type: 'button', className: 'dsh-rel-fchip',
+                  onClick: () => setShowFilters((v) => !v),
+                }, showFilters ? '收起筛选' : '更多筛选')),
+              showFilters ? filterGroups.map((g) => h('div', { key: g.key, className: 'dsh-rel-fgroup' },
+                h('span', { className: 'dsh-rel-muted', style: { fontSize: 10 } }, g.label),
+                h('div', { className: 'dsh-rel-frow' },
+                  h('button', {
+                    type: 'button', className: 'dsh-rel-fchip',
+                    'data-on': filters[g.key] === null ? 'true' : 'false',
+                    onClick: () => setFilters((f) => ({ ...f, [g.key]: null })),
+                  }, '全部'),
+                  g.opts.map((k) => h('button', {
+                    key: k, type: 'button', className: 'dsh-rel-fchip',
+                    'data-on': filters[g.key] === k ? 'true' : 'false',
+                    onClick: () => setFilters((f) => ({ ...f, [g.key]: f[g.key] === k ? null : k })),
+                  }, `${optLabel(g, k)} ${optCount(g, k)}`))))) : null,
             h('div', { className: 'dsh-rel-list' },
-              people.map((p) => h('button', {
-                key: p.id, type: 'button', className: 'dsh-rel-item',
-                'data-active': p.id === selectedId ? 'true' : 'false',
-                onClick: () => setSelectedId(p.id),
-              },
-              h('span', null, p.name),
-              h('b', {
-                style: { color: affOf(p) < 0 ? "var(--dsw-alias-label-dimmed)" : levelColor(affOf(p)) },
-              }, affOf(p) < 0 ? "—" : String(affOf(p))))))),
+              people.length === 0
+                ? h('div', { className: 'dsh-rel-muted', style: { padding: '8px' } }, '没有符合筛选的人')
+                : people.map((p) => {
+                  const v = affMap[p.id]
+                  const imp = impOf(p)
+                  return h('div', {
+                    key: p.id, role: 'button', tabIndex: 0, className: 'dsh-rel-item',
+                    'data-active': p.id === selectedId ? 'true' : 'false',
+                    onClick: () => setSelectedId(p.id),
+                    onKeyDown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedId(p.id) } },
+                  },
+                  h('div', { className: 'dsh-rel-item-top' },
+                    h('span', { className: 'dsh-rel-item-name' }, p.name),
+                    h('span', { className: 'dsh-rel-item-stage', 'data-s': stageOf(p) }, stageOf(p))),
+                  h('div', { className: 'dsh-rel-item-meta' },
+                    `${CAT_LABEL[p.category] || '其他'} · 重要 ${imp == null ? '—' : imp} · 在意 ${v ? v.mine + '/' + v.theirs : '—'} · 意向 ${intentOf(p)} · ${p.volume} 条`),
+                  h('div', { className: 'dsh-rel-item-bar' }, h('i', { style: { width: `${imp || 0}%` } })))
+                })))),
           h('main', { className: 'dsh-rel-canvas' },
             focus ? h(FocusChat, { person: focus.person, kind: focus.kind, topic: focus.topic, from: focus.from, to: focus.to, onClose: () => setFocus(null) })
               : mode === 'scatter' ? h(Scatter, { people, selectedId, onSelect: setSelectedId })
               : mode === 'network' ? h(Network, { people, selectedId, onSelect: setSelectedId })
               : mode === 'graph' ? h(Graph, null)
-              : mode === 'board' ? h(Board, { people, onPick: (k) => { setCat(k); setMode('scatter') } })
+              : mode === 'board' ? h(Board, { people, onPick: (k) => { setFilters((f) => ({ ...f, role: k })); setMode('scatter') } })
                 : mode === 'timeline' ? h(Timeline, { people })
                   : mode === 'insights' ? h(Insights, { onSelect: setSelectedId })
                     : h(Me, null)),
           selected ? h(Detail, {
             person: selected,
+            careOverride: careEdits[selected.id],
+            onMarkCare: markCare,
             onFocus: (kind, extra) => {
               const isTopic = ['work', 'love', 'food', 'game', 'family'].includes(kind)
               setFocus({
@@ -4192,7 +6018,7 @@ window.__ModuleLoader__.load({
 .dsh-rel-mode{height:26px;padding:0 10px;border:1px solid var(--dsw-alias-border-l2);border-radius:var(--dsw-radius-sm);background:0 0;color:var(--dsw-alias-label-tertiary);font:inherit;font-size:12px;cursor:pointer}
 .dsh-rel-mode[data-active=true]{color:var(--dsw-alias-label-primary);border-color:var(--dsw-alias-brand-primary)}
 .dsh-rel-body{display:flex;flex:1;min-height:0;border-top:1px solid var(--dsw-alias-border-l1)}
-.dsh-rel-side{width:260px;flex:none;display:flex;flex-direction:column;gap:6px;padding:10px;border-right:1px solid var(--dsw-alias-border-l1);min-height:0}
+.dsh-rel-side{width:340px;flex:none;display:flex;flex-direction:column;gap:6px;padding:10px;border-right:1px solid var(--dsw-alias-border-l1);min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
 .dsh-rel-input{height:28px;padding:0 8px;border:1px solid var(--dsw-alias-border-l2);border-radius:var(--dsw-radius-sm);background:var(--dsw-alias-bg-layer-1);color:var(--dsw-alias-label-primary);font:inherit;font-size:12px}
 .dsh-rel-cats{display:flex;flex-direction:column;gap:2px}
 .dsh-rel-cat{display:flex;align-items:center;gap:6px;padding:5px 8px;border:0;border-radius:var(--dsw-radius-sm);background:0 0;color:var(--dsw-alias-label-secondary);font:inherit;font-size:12px;cursor:pointer;text-align:left}
@@ -4200,10 +6026,28 @@ window.__ModuleLoader__.load({
 .dsh-rel-cat i{width:7px;height:7px;border-radius:50%}
 .dsh-rel-cat span{flex:1}
 .dsh-rel-cat b{color:var(--dsw-alias-label-tertiary);font-size:11px}
-.dsh-rel-list{flex:1;min-height:0;overflow:auto;display:flex;flex-direction:column;gap:1px}
+.dsh-rel-list{flex:none;min-height:0;overflow:visible;display:flex;flex-direction:column;gap:2px}
 .dsh-rel-item{display:flex;justify-content:space-between;gap:8px;padding:5px 8px;border:0;border-radius:var(--dsw-radius-sm);background:0 0;color:var(--dsw-alias-label-secondary);font:inherit;font-size:12px;cursor:pointer;text-align:left}
 .dsh-rel-item[data-active=true]{background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary)}
 .dsh-rel-item b{color:var(--dsw-alias-label-tertiary);font-size:11px}
+.dsh-rel-filters{display:flex;flex-direction:column;gap:5px;margin:2px 0 4px;flex:none}
+.dsh-rel-quick{display:flex;gap:4px;flex-wrap:wrap;padding-bottom:3px;border-bottom:1px dashed var(--dsw-alias-border-l1);margin-bottom:2px}
+.dsh-rel-fgroup{display:flex;flex-direction:column;gap:3px}
+.dsh-rel-frow{display:flex;flex-wrap:nowrap;gap:4px;overflow-x:auto;padding-bottom:3px;scrollbar-width:thin}
+.dsh-rel-fchip{flex:none;appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;height:auto;min-height:0;font:inherit;font-size:10.5px;line-height:1.5;letter-spacing:normal;text-transform:none;padding:1px 7px;border:1px solid var(--dsw-alias-border-l2);border-radius:999px;background:0 0;box-shadow:none;color:var(--dsw-alias-label-tertiary);cursor:pointer}
+.dsh-rel-fchip[data-on=true]{color:var(--dsw-alias-label-primary);border-color:var(--dsw-alias-brand-primary);background:var(--dsw-alias-interactive-bg-hover)}
+.dsh-rel-item{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto auto;gap:2px 8px;align-items:baseline;height:auto;min-height:0;line-height:1.35;padding:7px 8px;border:0;border-radius:var(--dsw-radius-sm);background:0 0;color:var(--dsw-alias-label-secondary);font:inherit;font-size:12px;font-weight:400;letter-spacing:normal;text-align:left;cursor:pointer;flex:none;user-select:none}
+.dsh-rel-item[data-active=true]{background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary)}
+.dsh-rel-item-top{display:contents}
+.dsh-rel-item-name{grid-column:1;grid-row:1;min-width:0;font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dsh-rel-item-stage{grid-column:2;grid-row:1;font-size:10px;color:var(--dsw-alias-label-tertiary);white-space:nowrap}
+.dsh-rel-item-stage[data-s=升温]{color:var(--dsw-alias-state-success-primary)}
+.dsh-rel-item-stage[data-s=降温]{color:var(--dsw-alias-state-warn-primary)}
+.dsh-rel-item-stage[data-s=沉寂]{color:var(--dsw-alias-label-dimmed)}
+.dsh-rel-item-stage[data-s=单向]{color:var(--dsw-alias-state-error-primary)}
+.dsh-rel-item-meta{grid-column:1/-1;grid-row:2;font-size:10.5px;color:var(--dsw-alias-label-tertiary);font-variant-numeric:tabular-nums;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dsh-rel-item-bar{grid-column:1/-1;grid-row:3;height:2px;width:100%;background:var(--dsw-alias-border-l1);border-radius:999px;overflow:hidden;margin-top:2px}
+.dsh-rel-item-bar i{display:block;height:100%;background:var(--dsw-alias-brand-primary)}
 .dsh-rel-canvas{flex:1;min-width:0;display:flex;flex-direction:column;padding:10px 12px;min-height:0;overflow:auto}
 .dsh-rel-svg{flex:1;width:100%;min-height:0}
 .dsh-rel-plot{fill:var(--dsw-alias-bg-layer-1);opacity:.5}
